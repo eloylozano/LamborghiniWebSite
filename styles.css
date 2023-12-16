@@ -1,5 +1,5 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -11,60 +11,84 @@ body {
     background-color: #3b3b3b;
 }
 
-header{
+header{ 
     margin: 0 auto;
     width: 100%;
-    background-color: #1a1a1a;    
+    background-color: #1a1a1a;
     position: fixed;
-    z-index: 1000; 
+    z-index: 1000;
+    clear: both; /* Asegura que no haya elementos flotantes a su alrededor */
 }
 
-.nav-header{
+.nav-header {
     display: inline-flex;
-    font-size: 1.1em ;
-    font-weight: 100;
+    font-size: 1em;
     color: whitesmoke;
     align-items: center;
     justify-content: center;
-    margin: 0 50px;
+    width: 100%;
 }
 
-.nav-header-left{
+.nav-header-left {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    float: left;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nav-header-left-logo{
+.nav-header-left-logo {
     margin-right: 30px;
 }
 
-.nav-header-text{
-    padding: 0 10px;
+.nav-header-text {
+    margin: 0 10px;
+    position: relative; /* Añadido para el posicionamiento del ::before */
+}
+.nav-header-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajusta este valor para cambiar la separación */
+    width: 0%; /* Ajuste para el tamaño del subrayado en el estado normal */
+    height: 1px;
+    font-weight: 400;
+    background-color: transparent;
+    transition: width 0.5s;
 }
 
-.nav-header-right{
+.nav-header-text:hover::before {
+    width: 100%; /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
+    font-weight: 400;
+    background-color: white;
+}
+
+.nav-header-text {
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+.nav-header li {
+    padding: 3px;
+}
+
+
+.nav-header-right {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    float: right;
-    display: flex;
+    margin-left: auto;
+    padding-right: 40px;
     align-items: center;
     justify-content: center;
-    margin-left: 300px;
 }
 
+.nav-header-right .img {
+    padding-left: 20px;
+}
 
-
-
-
-
-
-
+.nav-header-right .img:hover {
+    filter: brightness(100);
+}
 
 
 
@@ -74,13 +98,40 @@ header{
 main{
     background: #9e9e9e;
     height: 100vh;
-    padding: 100px 0 0 0;
 }
 
+.portada-main {
+    position: relative;
+}
 
+.portada-main video {
+    width: 100%; /* Ajusta según sea necesario */
+    height: auto; /* Ajusta según sea necesario */
+    display: block;
+}
 
+.text-video {
+    position: absolute;
+    top: 50%; /* Ajusta según sea necesario */
+    left: 170px; /* Ajusta según sea necesario */
+    transform: translateY(-50%);
+    color: white; /* Ajusta según sea necesario */
+}
 
+.text-video h1{
+    font-size: 5rem;
+    width: 60%;
+}
 
+.text-video p{
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.text-video h1,
+.text-video p {
+    margin: 0;
+}
 
 
 
