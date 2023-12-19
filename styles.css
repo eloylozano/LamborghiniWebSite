@@ -90,11 +90,6 @@ header{
     filter: brightness(100);
 }
 
-
-
-
-
-
 main {
     background: pink;
 }
@@ -105,18 +100,18 @@ main {
     display: block;
 }
 
-
 .text-video {
     position: absolute;
-    top: 50%; /* Ajusta según sea necesario */
-    left: 170px; /* Ajusta según sea necesario */
+    top: 50%; 
+    left: 170px; 
     transform: translateY(-50%);
-    color: white; /* Ajusta según sea necesario */
+    color: white; 
 }
 
 .text-video h1{
-    font-size: 6rem;
+    font-size: 7rem;
     width: 60%;
+    line-height: 1; 
 }
 
 .text-video h2 {
@@ -130,24 +125,23 @@ main {
     margin: 0;
 }
 
-
-
 .modelos-main {
     position: relative;
 }
 
-.modelos-main img {
+.modelos-main-pic img {
     width: 100%;
+    height: 95vh;
     display: block;
 }
 
 .text-images {
     height: 100%;
     position: absolute;
-    top: 50%; /* Ajusta según sea necesario */
-    left: 170px; /* Ajusta según sea necesario */
+    top: 50%; 
+    left: 170px; 
     transform: translateY(-50%);
-    color: white; /* Ajusta según sea necesario */
+    color: white; 
 }
 
 .text-images h2 {
@@ -177,25 +171,24 @@ main {
     position: relative;
 }
 
-.configurador-main img {
+.configurador-main-pic img {
     width: 100%;
     display: block;
 }
 
-
 .text-configurador {
     position: absolute;
-    top: 37%; /* Ajusta según sea necesario */
-    left: 170px; /* Ajusta según sea necesario */
+    top: 37%; 
+    left: 170px; 
     transform: translateY(-50%);
-    color: #1a1a1a; /* Ajusta según sea necesario */
+    color: #1a1a1a; 
+    margin-top: 80px;
 }
 
 .text-configurador h1{
     font-size: 5rem;
     width: 100%;    
-    line-height: 1; /* Ajusta según sea necesario */
-
+    line-height: 1; 
 }
 
 .text-configurador h2 {
@@ -209,6 +202,61 @@ main {
     margin: 0;
 }
 
+.hexagons{
+    margin: 40px 0;
+}
+
+.hexagon-empty,
+.hexagon-full {
+    position: absolute; 
+    opacity: 1;
+    transition: opacity 0.3s ease; 
+}
+
+.hexagon-full {
+    opacity: 0;
+}
+
+.hexagons:hover .hexagon-empty {
+    opacity: 0;
+}
+
+.hexagons:hover .hexagon-full {
+    opacity: 1;
+}
+
+.concesionarios-main {
+    position: relative;
+}
+
+.concesionarios-main-pic img {
+    width: 100%;
+    display: block;
+}
+
+.text-concesionarios {
+    position: absolute;
+    top: 50%; 
+    left: 170px; 
+    transform: translateY(-50%);
+    color: #fff; 
+}
+
+.text-concesionarios h1{
+    font-size: 5rem;
+    width: 60%;    
+    line-height: 1;
+}
+
+.text-concesionarios h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.text-concesionarios h1,
+.text-concesionarios p {
+    margin: 0;
+}
 
 
 
