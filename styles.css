@@ -11,13 +11,14 @@ body {
     background-color: #3b3b3b;
 }
 
-header{ 
+header {
     margin: 0 auto;
     width: 100%;
     background-color: #1a1a1a;
     position: fixed;
     z-index: 1000;
-    clear: both; /* Asegura que no haya elementos flotantes a su alrededor */
+    clear: both;
+    /* Asegura que no haya elementos flotantes a su alrededor */
 }
 
 .nav-header {
@@ -43,14 +44,18 @@ header{
 
 .nav-header-text {
     margin: 0 10px;
-    position: relative; /* Añadido para el posicionamiento del ::before */
+    position: relative;
+    /* Añadido para el posicionamiento del ::before */
 }
+
 .nav-header-text::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px; /* Ajusta este valor para cambiar la separación */
-    width: 0%; /* Ajuste para el tamaño del subrayado en el estado normal */
+    bottom: -5px;
+    /* Ajusta este valor para cambiar la separación */
+    width: 0%;
+    /* Ajuste para el tamaño del subrayado en el estado normal */
     height: 1px;
     font-weight: 400;
     background-color: transparent;
@@ -58,7 +63,8 @@ header{
 }
 
 .nav-header-text:hover::before {
-    width: 100%; /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
+    width: 100%;
+    /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
     font-weight: 400;
     background-color: white;
 }
@@ -71,7 +77,6 @@ header{
 .nav-header li {
     padding: 3px;
 }
-
 
 .nav-header-right {
     list-style: none;
@@ -91,27 +96,27 @@ header{
 }
 
 main {
-    background: pink;
+    background: greenyellow;
 }
 
 .portada-main video {
-    width: 100%; 
+    width: 100%;
     height: auto;
     display: block;
 }
 
 .text-video {
     position: absolute;
-    top: 50%; 
-    left: 170px; 
+    top: 50%;
+    left: 170px;
     transform: translateY(-50%);
-    color: white; 
+    color: white;
 }
 
-.text-video h1{
+.text-video h1 {
     font-size: 7rem;
     width: 60%;
-    line-height: 1; 
+    line-height: 1;
 }
 
 .text-video h2 {
@@ -127,21 +132,20 @@ main {
 
 .modelos-main {
     position: relative;
-}
-
-.modelos-main-pic img {
-    width: 100%;
-    height: 95vh;
-    display: block;
+    background-image: url(/assets/images/LamborghiniRevuelto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    overflow: hidden;
 }
 
 .text-images {
     height: 100%;
     position: absolute;
-    top: 50%; 
-    left: 170px; 
+    top: 50%;
+    left: 170px;
     transform: translateY(-50%);
-    color: white; 
+    color: white;
 }
 
 .text-images h2 {
@@ -169,48 +173,77 @@ main {
 
 .configurador-main {
     position: relative;
-}
-
-.configurador-main-pic img {
-    width: 100%;
-    display: block;
+    background-image: url(assets/images/ConfiguradorRevuelto.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 699px;
+    transition: background-image 0.5s ease;
 }
 
 .text-configurador {
     position: absolute;
-    top: 37%; 
-    left: 170px; 
+    width: 400px;
+    top: 37%;
+    left: 170px;
     transform: translateY(-50%);
-    color: #1a1a1a; 
-    margin-top: 80px;
+    color: #1a1a1a;
+    padding: 100px 0 0;
 }
 
-.text-configurador h1{
+.text-configurador h1 {
     font-size: 5rem;
-    width: 100%;    
-    line-height: 1; 
+    width: 100%;
+    line-height: 1;
+    opacity: 0;
+    transform: translateX(-800px); /* Coloca el elemento fuera de la pantalla al inicio */
+}
+
+.text-configurador h1.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 2s, transform 1s; /* Puedes ajustar la duración de la opacidad aquí también */
 }
 
 .text-configurador h2 {
-    margin-bottom: 20px;
+    display: flex;
     font-size: 1.8em;
     font-weight: 600;
 }
 
-.text-configurador h1,
-.text-configurador p {
-    margin: 0;
+.text-configurador h2 div {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-.hexagons{
+/* Añade una nueva regla para animar la aparición de las letras */
+.text-configurador h2 div.show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: appearAnimation 0.5s ease-in-out;
+}
+
+/* Define la animación de aparición usando @keyframes */
+@keyframes appearAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(0); /* Puedes ajustar la distancia de desplazamiento */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hexagons {
+    height: 60px;
     margin: 40px 0;
 }
 
 .hexagon-empty,
 .hexagon-full {
-    position: absolute; 
+    position: absolute;
     opacity: 1;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
 }
 
 .hexagon-full {
@@ -225,6 +258,48 @@ main {
     opacity: 1;
 }
 
+.buttons-configurador {
+    border-bottom: 1px solid #9e9e9e;
+    width: 96%;
+}
+
+.buttons-configurador button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    font-weight: 100;
+    padding: 0 70px 20px 0px;
+    color: #1a1a1a;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.5s;
+    /* Añadido para la transición del color del texto */
+}
+
+.buttons-configurador button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 1px;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+.buttons-configurador button.clicked::before {
+    width: 100%;
+    background-color: #000;
+}
+
+.buttons-configurador button:hover::before {
+    width: 100%;
+    background-color: #000;
+}
+
 .concesionarios-main {
     position: relative;
 }
@@ -236,15 +311,15 @@ main {
 
 .text-concesionarios {
     position: absolute;
-    top: 50%; 
-    left: 170px; 
+    top: 50%;
+    left: 170px;
     transform: translateY(-50%);
-    color: #fff; 
+    color: #fff;
 }
 
-.text-concesionarios h1{
+.text-concesionarios h1 {
     font-size: 5rem;
-    width: 60%;    
+    width: 60%;
     line-height: 1;
 }
 
@@ -307,8 +382,10 @@ footer section li {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 5px; /* Ajusta este valor para cambiar la separación */
-    width: 0%; /* Ajuste para el tamaño del subrayado en el estado normal */
+    bottom: 5px;
+    /* Ajusta este valor para cambiar la separación */
+    width: 0%;
+    /* Ajuste para el tamaño del subrayado en el estado normal */
     height: 1px;
     font-weight: 400;
     background-color: transparent;
@@ -316,12 +393,13 @@ footer section li {
 }
 
 .footer-rrss section li:hover::before {
-    width: 100%; /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
+    width: 100%;
+    /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
     font-weight: 400;
     background-color: white;
 }
 
-footer aside ul{
+footer aside ul {
     display: flex;
     list-style: none;
 }
@@ -330,14 +408,14 @@ footer aside ul li {
     padding: 0 10px;
 }
 
-.footer-consumos{
+.footer-consumos {
     font-size: 0.9rem;
     font-weight: 100;
     padding: 0 170px 20px;
     text-align: justify;
 }
 
-.footer-copyright p{
+.footer-copyright p {
     font-size: 1rem;
     margin: 10px 0;
     padding: 0 170px;
