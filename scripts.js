@@ -1,18 +1,22 @@
 function changeBackground(model, button) {
-    // Verifica si el botón ya tiene la clase "clicked"
-    if (button.classList.contains('clicked')) {
-      return;
-    }
-  
-    const configuradorMain = document.querySelector('.configurador-main');
-  
-    // Restablece la clase clicked en todos los botones
-    document.querySelectorAll('.buttons-configurador button').forEach((btn) => {
-      btn.classList.remove('clicked');
-    });
-  
-    // Agrega la clase clicked al botón actual
-    button.classList.add('clicked');
+  // Verifica si el botón ya tiene la clase "clicked"
+  if (button.classList.contains("clicked")) {
+    return;
+  }
+
+  const configuradorMain = document.querySelector(".configurador-main");
+  const hexagonEmpty = document.querySelector(".hexagon-empty");
+
+  // Restablece la clase clicked en todos los botones
+  document.querySelectorAll(".buttons-configurador button").forEach((btn) => {
+    btn.classList.remove("clicked");
+  });
+
+  // Agrega la clase clicked al botón actual
+  button.classList.add("clicked");
+
+  // Aplica la clase show al hexagon-empty para activar la animación
+  hexagonEmpty.classList.add("show");
 
   // Detén y reinicia la animación de los elementos h2
   const h2Letters = document.querySelectorAll(".text-configurador h2 div");
@@ -68,19 +72,10 @@ function updateH1Content(content) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Añade la clase show a los h1 al cargar la página con un retraso
-  const h1Elements = document.querySelectorAll(".text-configurador h1");
-  h1Elements.forEach((h1, index) => {
-    setTimeout(() => {
-      h1.classList.add("show");
-    }, index * 100);
-  });
-
-  // Añade la clase show a los div de h2 con un retraso
-  const letters = document.querySelectorAll(".text-configurador h2 div");
-  letters.forEach((letter, index) => {
-    setTimeout(() => {
-      letter.classList.add("show");
-    }, index * 100);
-  });
+  // Añade la clase show al hexagon-empty al cargar la página con un retraso
+  const hexagonEmpty = document.querySelector(".hexagon-empty");
+  setTimeout(() => {
+    hexagonEmpty.classList.add("show");
+  }, 100);
 });
+

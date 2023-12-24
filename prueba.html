@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini - Página Oficial</title>
+    <link rel="icon" href="assets/images/logo-lamborghini.svg">
+    <script src="scripts.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        background-color: #333;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    li {
+        position: relative;
+    }
+
+    a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Estilos para el menú desplegable */
+    ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+    }
+
+    ul li:hover>ul {
+        display: inherit;
+    }
+
+    ul ul li {
+        width: 200px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    ul ul ul li {
+        position: relative;
+        top: -60px;
+        left: 200px;
+    }
+
+    /* Estilo para el enlace del menú desplegable */
+    li>a:after {
+        content: ' ▼';
+    }
+
+    /* Cambiar estilo al pasar el ratón por encima del enlace del menú desplegable */
+    li:hover>a {
+        background: #555;
+    }
+
+    li a:hover {
+        color: #fff;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a>
+                <ul>
+                    <li><a href="#">Diseño web</a></li>
+                    <li><a href="#">Desarrollo web</a></li>
+                    <li><a href="#">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
