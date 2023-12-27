@@ -41,6 +41,7 @@
           </li>
         </ul>
       </nav>
+    </header>
       <div class="submenu-modelos" id="submenu-modelos">
         <ul>
           <li>REVUELTO</li>
@@ -51,7 +52,6 @@
           <li>CONCEPT</li>
         </ul>
       </div>
-    </header>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -62,7 +62,7 @@
         var logo = document.getElementById("logo");
 
         modelos.addEventListener("mouseover", function () {
-          submenu.style.display = "block";
+          submenu.classList.add("show");
         });
 
         header.addEventListener("mouseleave", function (event) {
@@ -71,16 +71,16 @@
             !submenu.contains(event.relatedTarget) &&
             !beyond.contains(event.relatedTarget)
           ) {
-            submenu.style.display = "none";
+            submenu.classList.remove("show");
           }
         });
 
         beyond.addEventListener("mouseover", function () {
-          submenu.style.display = "none";
+          submenu.classList.remove("show");
         });
 
         logo.addEventListener("mouseover", function () {
-          submenu.style.display = "none";
+          submenu.classList.remove("show");
         });
       });
     </script>
