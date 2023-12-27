@@ -1,3 +1,33 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var modelos = document.getElementById("modelos");
+  var submenu = document.getElementById("submenu-modelos");
+  var header = document.getElementById("header");
+  var beyond = document.getElementById("beyond");
+  var logo = document.getElementById("logo");
+
+  modelos.addEventListener("mouseover", function () {
+    submenu.style.display = "block";
+  });
+
+  header.addEventListener("mouseleave", function (event) {
+    // Comprobamos si el mouse sale del área del submenu y si no se encuentra sobre "beyond"
+    if (
+      !submenu.contains(event.relatedTarget) &&
+      !beyond.contains(event.relatedTarget)
+    ) {
+      submenu.style.display = "none";
+    }
+  });
+
+  beyond.addEventListener("mouseover", function () {
+    submenu.style.display = "none";
+  });
+
+  logo.addEventListener("mouseover", function () {
+    submenu.style.display = "none";
+  });
+});
+
 function changeBackground(model, button) {
   // Verifica si el botón ya tiene la clase "clicked"
   if (button.classList.contains("clicked")) {

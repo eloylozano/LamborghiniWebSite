@@ -8,10 +8,10 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav class="nav-header">
         <ul class="nav-header-left">
-          <li class="nav-header-left-logo">
+          <li class="nav-header-left-logo" id="logo">
             <a href=""
               ><img
                 src="assets/images/logo-lamborghini.svg"
@@ -20,9 +20,11 @@
             /></a>
           </li>
           <li class="nav-header-text" id="modelos">MODELOS</li>
-          <li class="nav-header-text">BEYOND</li>
-          <li class="nav-header-text">SERVICIO AL CLIENTE</li>
-          <li class="nav-header-text">MOTORSPORT</li>
+          <li class="nav-header-text" id="beyond">BEYOND</li>
+          <li class="nav-header-text" id="clientservice">
+            SERVICIO AL CLIENTE
+          </li>
+          <li class="nav-header-text" id="motorsport">MOTORSPORT</li>
         </ul>
         <ul class="nav-header-right">
           <li class="nav-header-text">CONCESIONARIOS</li>
@@ -52,28 +54,34 @@
     </header>
 
     <script>
-      document.getElementById("modelos").addEventListener("click", function () {
+      document.addEventListener("DOMContentLoaded", function () {
+        var modelos = document.getElementById("modelos");
         var submenu = document.getElementById("submenu-modelos");
-        submenu.style.transition = "display 0.5s";
-        submenu.style.display =
-          submenu.style.display === "block" ? "none" : "block";
-      });
+        var header = document.getElementById("header");
+        var beyond = document.getElementById("beyond");
+        var logo = document.getElementById("logo");
 
-      var modelos = document.getElementById("modelos");
-      var submenu = document.getElementById("submenu-modelos");
+        modelos.addEventListener("mouseover", function () {
+          submenu.style.display = "block";
+        });
 
-      modelos.addEventListener("click", function () {
-        submenu.style.transition = "max-height 1s ease-in-out";
-        submenu.style.maxHeight =
-          submenu.style.maxHeight === "0px" ? "1000px" : "0";
-      });
+        header.addEventListener("mouseleave", function (event) {
+          // Comprobamos si el mouse sale del área del submenu y si no se encuentra sobre "beyond"
+          if (
+            !submenu.contains(event.relatedTarget) &&
+            !beyond.contains(event.relatedTarget)
+          ) {
+            submenu.style.display = "none";
+          }
+        });
 
-      modelos.addEventListener("mouseover", function () {
-        submenu.style.maxHeight = "1000px";
-      });
+        beyond.addEventListener("mouseover", function () {
+          submenu.style.display = "none";
+        });
 
-      modelos.addEventListener("mouseout", function () {
-        submenu.style.maxHeight = "0";
+        logo.addEventListener("mouseover", function () {
+          submenu.style.display = "none";
+        });
       });
     </script>
   </body>

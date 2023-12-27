@@ -29,38 +29,48 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .nav-header-left-logo {
-  margin-right: 30px;
+  margin: 0 30px;
 }
 
 .nav-header-text {
-  margin: 0 10px;
-  position: relative;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
 }
 
 .nav-header-text::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 1px;
-  font-weight: 400;
-  background-color: transparent;
-  transition: width 0.5s;
-}
-
-.nav-header-text:hover {
-  cursor: pointer;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    font-weight: 400;
+    transition: width 0.5s,
 }
 
 .nav-header-text:hover::before {
-  width: 100%;
-  cursor: pointer;
-  font-weight: 400;
-  background-color: white;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-header-text::before {
+    transition: width 0.5s, background-color 0.5s, transform 0.5s;
+}
+
+.nav-header-text:hover::before {
+    width: 100%;
+    background-color: white;
+    transform: translateY(0);
+}
+
+.nav-header-text:hover::before {
+    transform: translateY(0);
 }
 
 .nav-header li {
@@ -81,38 +91,25 @@ header {
 }
 
 .submenu-modelos {
-  display: none;
-  color: #9e9e9e;
-  margin: 0;
-  padding: 0;
+    display: none;
+    color: #9e9e9e;
+    margin: 0;
+    padding-bottom: 50px;
 }
 
 .submenu-modelos ul {
-  font-size: 0.9em;
-  margin-top: 0;
-  margin-left: 100px;
-  margin-bottom: 50px;
-  list-style: none;
+    font-size: 0.9em;
+    margin-top: 0;
+    transform: translateX(90px);
+    list-style: none;
 }
 
 .submenu-modelos ul li {
-  padding: 10px 0;
+    padding: 15px 0;
+    transition: color 0.3s; 
 }
 
 .submenu-modelos ul li:hover {
-  color: white;
-  cursor: pointer;
-}
-
-/* Agrega estos estilos CSS para la transición de arriba a abajo */
-.submenu-modelos.transition {
-  transition: max-height 0.5s ease-in-out;
-  max-height: 0;
-  overflow: hidden;
-}
-
-.submenu-modelos ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    color: white;
+    cursor: pointer;
 }
