@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lightseagreen;
+}
+
+header {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #1a1a1a;
+  position: fixed;
+  z-index: 1000;
+  clear: both;
+}
+
+.nav-header {
+  display: inline-flex;
+  font-size: 1em;
+  color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-header-left {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-header-left-logo {
+  margin-right: 30px;
+}
+
+.nav-header-text {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-header-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  font-weight: 400;
+  background-color: transparent;
+  transition: width 0.5s;
+}
+
+.nav-header-text:hover {
+  cursor: pointer;
+}
+
+.nav-header-text:hover::before {
+  width: 100%;
+  cursor: pointer;
+  font-weight: 400;
+  background-color: white;
+}
+
+.nav-header li {
+  padding: 3px;
+}
+
+.nav-header-right {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  padding-right: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-header-right .img {
+  padding-left: 20px;
+}
+
+.submenu-modelos {
+  display: none;
+  color: #9e9e9e;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-modelos ul {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  list-style: none;
+}
+
+.submenu-modelos ul li {
+  padding: 10px 0;
+}
+
+.submenu-modelos ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Agrega estos estilos CSS para la transición de arriba a abajo */
+.submenu-modelos.transition {
+  transition: max-height 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.submenu-modelos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
