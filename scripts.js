@@ -27,6 +27,35 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var clientservice = document.getElementById("clientservice");
+  var submenu = document.getElementById("submenu-servicios");
+  var header = document.getElementById("header");
+  var beyond = document.getElementById("beyond");
+  var motorsport = document.getElementById("motorsport");
+
+  clientservice.addEventListener("mouseover", function () {
+    submenu.classList.add("show");
+  });
+
+  submenu.addEventListener("mouseleave", function (event) {
+    if (
+      !submenu.contains(event.relatedTarget) &&
+      !beyond.contains(event.relatedTarget)
+    ) {
+      submenu.classList.remove("show");
+    }
+  });
+
+  beyond.addEventListener("mouseover", function () {
+    submenu.classList.remove("show");
+  });
+
+  motorsport.addEventListener("mouseover", function () {
+    submenu.classList.remove("show");
+  });
+});
+
 function changeBackground(model, button) {
   if (button.classList.contains("clicked")) {
     return;
