@@ -56,6 +56,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  var motorsport = document.getElementById("motorsport");
+  var submenu = document.getElementById("submenu-motorsport");
+  var header = document.getElementById("header");
+  var concesionarios = document.getElementById("concesionarios");
+  var motorsport = document.getElementById("motorsport");
+
+  motorsport.addEventListener("mouseover", function () {
+    submenu.classList.add("show");
+  });
+
+  submenu.addEventListener("mouseleave", function (event) {
+    if (
+      !submenu.contains(event.relatedTarget) &&
+      !concesionarios.contains(event.relatedTarget)
+    ) {
+      submenu.classList.remove("show");
+    }
+  });
+
+  concesionarios.addEventListener("mouseover", function () {
+    submenu.classList.remove("show");
+  });
+
+  clientservice.addEventListener("mouseover", function () {
+    submenu.classList.remove("show");
+  });
+});
+
 function changeBackground(model, button) {
   if (button.classList.contains("clicked")) {
     return;
