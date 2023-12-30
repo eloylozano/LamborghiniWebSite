@@ -8,16 +8,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #3b3b3b;
+  background-color: #1a1a1a;
 }
 
 header {
-  margin: 0 auto;
   width: 100%;
   background-color: #1a1a1a;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
-  clear: both;
 }
 
 .nav-header {
@@ -99,7 +99,7 @@ header {
 }
 
 .submenu-modelos {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   width: 100%;
   background-color: #1a1a1a;
@@ -143,100 +143,102 @@ header {
   cursor: pointer;
 }
 
-
 .submenu-servicios {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    background-color: #1a1a1a;
-    opacity: 0;
-    transform: translateY(-500px);
-    top: 70px;
-    color: #9e9e9e;
-    margin: 0;
-    padding-bottom: 30px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: transform 0.5s; /* Añadido para la transición inversa */
-  }
-  
-  .submenu-servicios.show {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 0.5s;
-  }
-  
-  
-  .submenu-servicios ul {
-    font-size: 0.9em;
-    margin-left: 185px;
-    margin-top: 20px;
-    transform: translateX(90px);
-    list-style: none;
-  }
-  
-  .submenu-servicios ul li {
-    padding: 15px 0;
-    transition: color 0.5s;
-    opacity: 0;
-  }
-  
-  .submenu-servicios.show ul li {
-    opacity: 1;
-  }
-  
-  .submenu-motorsport ul li:hover {
-    color: white;
-    cursor: pointer;
-  }
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #1a1a1a;
+  opacity: 0;
+  transform: translateY(-500px);
+  top: 70px;
+  color: #9e9e9e;
+  margin: 0;
+  padding-bottom: 30px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: transform 0.5s; /* Añadido para la transición inversa */
+}
 
-  .submenu-motorsport {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    background-color: #1a1a1a;
-    opacity: 0;
-    transform: translateY(-500px);
-    top: 70px;
-    color: #9e9e9e;
-    margin: 0;
-    padding-bottom: 30px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: transform 0.5s; /* Añadido para la transición inversa */
-  }
-  
-  .submenu-motorsport.show {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 0.5s;
-  }
-  
-  
-  .submenu-motorsport ul {
-    font-size: 0.9em;
-    margin-left: 360px;
-    margin-top: 20px;
-    transform: translateX(90px);
-    list-style: none;
-  }
-  
-  .submenu-motorsport ul li {
-    padding: 15px 0;
-    transition: color 0.5s;
-    opacity: 0;
-  }
-  
-  .submenu-motorsport.show ul li {
-    opacity: 1;
-  }
-  
-  .submenu-motorsport ul li:hover {
-    color: white;
-    cursor: pointer;
-  }
+.submenu-servicios.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+
+.submenu-servicios ul {
+  font-size: 0.9em;
+  margin-left: 185px;
+  margin-top: 20px;
+  transform: translateX(90px);
+  list-style: none;
+}
+
+.submenu-servicios ul li {
+  padding: 15px 0;
+  transition: color 0.5s;
+  opacity: 0;
+}
+
+.submenu-servicios.show ul li {
+  opacity: 1;
+}
+
+.submenu-servicios ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.submenu-motorsport ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.submenu-motorsport {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #1a1a1a;
+  opacity: 0;
+  transform: translateY(-500px);
+  top: 70px;
+  color: #9e9e9e;
+  margin: 0;
+  padding-bottom: 30px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: transform 0.5s; /* Añadido para la transición inversa */
+}
+
+.submenu-motorsport.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s;
+}
+
+.submenu-motorsport ul {
+  font-size: 0.9em;
+  margin-left: 360px;
+  margin-top: 20px;
+  transform: translateX(90px);
+  list-style: none;
+}
+
+.submenu-motorsport ul li {
+  padding: 15px 0;
+  transition: color 0.5s;
+  opacity: 0;
+}
+
+.submenu-motorsport.show ul li {
+  opacity: 1;
+}
+
+.submenu-motorsport ul li:hover {
+  color: white;
+  cursor: pointer;
+}
 /* ---------------------------------------------------------------------------------- */
 
 main {
