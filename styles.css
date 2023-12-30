@@ -91,11 +91,38 @@ header {
   margin-left: auto;
   padding-right: 40px;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
 }
 
 .nav-header-right .img {
   padding-left: 20px;
+}
+
+.icon-container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.icon-smoke,
+.icon-white {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.icon-white {
+  opacity: 0;
+}
+
+.icon-container:hover .icon-smoke {
+  opacity: 0;
+}
+
+.icon-container:hover .icon-white {
+  opacity: 1;
 }
 
 .submenu-modelos {

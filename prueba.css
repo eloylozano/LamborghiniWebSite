@@ -138,3 +138,32 @@ header {
   color: white;
   cursor: pointer;
 }
+
+
+
+
+.hexagons {
+  width: 60px;
+  height: 60px;
+  margin: 40px 0;
+  cursor: pointer;
+}
+
+.hexagon-empty,
+.hexagon-full {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hexagon-full {
+  opacity: 0;
+}
+
+.hexagons:hover .hexagon-empty {
+  opacity: 0;
+}
+
+.hexagons:hover .hexagon-full {
+  opacity: 1;
+}
