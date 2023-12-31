@@ -91,7 +91,6 @@ header {
   margin-left: auto;
   padding-right: 40px;
   align-items: center;
-  cursor: pointer;
   justify-content: center;
 }
 
@@ -108,6 +107,7 @@ header {
 
 .icon-smoke,
 .icon-white {
+  cursor: pointer;
   position: absolute;
   opacity: 1;
   transition: opacity 0.2s ease;
@@ -125,6 +125,139 @@ header {
   opacity: 1;
 }
 
+.barras {
+  cursor: pointer;
+}
+
+.barra1,
+.barra2,
+.barra3 {
+  background-color: rgb(192, 192, 192);
+  height: 1px;
+  width: 22px;
+  margin-top: 7px;
+  transition: transform 0.5s, opacity 0.5s, background 0.5s;
+}
+
+.barras.active .barra1 {
+  transform: rotate(45deg) translate(6px, 6px); /* Ajustado para inclinarse desde la izquierda */
+}
+
+.barras.active .barra2 {
+  opacity: 0;
+}
+
+.barras.active .barra3 {
+  transform: rotate(-45deg) translate(6px, -6px); /* Ajustado para inclinarse desde la izquierda */
+}
+
+.barras:hover .barra1,
+.barras.active .barra2,
+.barras:hover .barra3 {
+  background: white;
+}
+
+.submenu-general {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #1a1a1a;
+  opacity: 0;
+  transform: translateY(-500px);
+  top: 70px;
+  color: white;
+  margin: 0;
+  padding-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.5s;
+  height: 600px;
+}
+.submenu-general.show {
+  max-height: 750px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submenu-general ul {
+  font-size: 0.9em;
+  margin-top: 20px;
+  transform: translateX(90px);
+  list-style: none;
+}
+
+.submenu-general ul li {
+  padding: 15px 0;
+  position: relative;
+  transition: color 0.5s;
+  width: fit-content;
+}
+
+.submenu-general.show ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: width 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.submenu-general.show ul li:hover::before {
+  width: 100%;
+  transform-origin: bottom left;
+}
+
+.submenu-general ul li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.columnas {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.columna1,
+.columna2,
+.columna3 {
+  padding-right: 100px;
+}
+
+.columnas ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: width 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.columnas ul li:hover::before {
+  width: 100%;
+  transform-origin: bottom left;
+}
+
+.submenu-general hr{
+  width: 85%;
+  height: 1px;
+  border: none;
+  background-color: #3c3c3c;
+}
+
+#header.submenu-active .nav-header-text {
+  color: #c0c0c0;
+}
+
+#header.submenu-active .img img {
+  filter: grayscale(100%); 
+}
+
 .submenu-modelos {
   position: fixed;
   z-index: 10;
@@ -138,7 +271,7 @@ header {
   padding-bottom: 30px;
   max-height: 0px;
   overflow: hidden;
-  transition: transform 0.5s; /* Añadido para la transición inversa */
+  transition: transform 0.5s; 
 }
 
 .submenu-modelos.show {
@@ -544,6 +677,7 @@ footer section li {
   position: relative;
   margin: 0px 10px;
   padding: 0 0px 10px;
+  cursor: pointer;
 }
 
 .footer-rrss section li::before {
@@ -551,9 +685,7 @@ footer section li {
   position: absolute;
   left: 0;
   bottom: 5px;
-  /* Ajusta este valor para cambiar la separación */
   width: 0%;
-  /* Ajuste para el tamaño del subrayado en el estado normal */
   height: 1px;
   font-weight: 400;
   background-color: transparent;
@@ -562,7 +694,6 @@ footer section li {
 
 .footer-rrss section li:hover::before {
   width: 100%;
-  /* Ajuste para el tamaño completo del subrayado en el estado de :hover */
   font-weight: 400;
   background-color: white;
 }

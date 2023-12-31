@@ -1,88 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lamborghini - Página Oficial</title>
-    <link rel="stylesheet" href="prueba.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header id="header">
-      <nav class="nav-header">
-        <ul class="nav-header-left">
-          <li class="nav-header-left-logo" id="logo">
-            <a href=""
-              ><img
-                src="assets/images/logo-lamborghini.svg"
-                width="50px"
-                alt="logo-lamborghini"
-            /></a>
-          </li>
-          <li class="nav-header-text" id="modelos">MODELOS</li>
-          <li class="nav-header-text" id="beyond">BEYOND</li>
-          <li class="nav-header-text" id="clientservice">
-            SERVICIO AL CLIENTE
-          </li>
-          <li class="nav-header-text" id="motorsport">MOTORSPORT</li>
-        </ul>
-        <ul class="nav-header-right">
-          <li class="nav-header-text">CONCESIONARIOS</li>
-          <li class="nav-header-text">MUSEO</li>
-          <li class="nav-header-text">STORE</li>
-          <li class="img">
-            <img src="assets/images/logo-chat-smoke.png" width="30px" />
-          </li>
-          <li class="img">
-            <img src="assets/images/logo-lupa-smokepng.png" width="30px" />
-          </li>
-          <li class="img">
-            <img src="assets/images/logo-submenu-smokewhite.png" width="30px" />
-          </li>
-        </ul>
-      </nav>
-    </header>
-      <div class="submenu-modelos" id="submenu-modelos">
-        <ul>
-          <li>REVUELTO</li>
-          <li>HURACÁN</li>
-          <li>URUS</li>
-          <li>SEGUNDA MANO</li>
-          <li>SERIE LIMITADA</li>
-          <li>CONCEPT</li>
-        </ul>
-      </div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Rotación</title>
+  <style>
+    .rotated-div {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      transform: rotate(45deg); /* Puedes ajustar el ángulo según tus necesidades */
+      margin: 50px; /* Añadido para mayor claridad en la visualización */
+    }
+  </style>
+</head>
+<body>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var modelos = document.getElementById("modelos");
-        var submenu = document.getElementById("submenu-modelos");
-        var header = document.getElementById("header");
-        var beyond = document.getElementById("beyond");
-        var logo = document.getElementById("logo");
+  <div class="rotated-div"></div>
 
-        modelos.addEventListener("mouseover", function () {
-          submenu.classList.add("show");
-        });
-
-        header.addEventListener("mouseleave", function (event) {
-          // Comprobamos si el mouse sale del área del submenu y si no se encuentra sobre "beyond"
-          if (
-            !submenu.contains(event.relatedTarget) &&
-            !beyond.contains(event.relatedTarget)
-          ) {
-            submenu.classList.remove("show");
-          }
-        });
-
-        beyond.addEventListener("mouseover", function () {
-          submenu.classList.remove("show");
-        });
-
-        logo.addEventListener("mouseover", function () {
-          submenu.classList.remove("show");
-        });
-      });
-    </script>
-  </body>
+</body>
 </html>

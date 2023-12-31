@@ -86,6 +86,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function toggleBars() {
+  const barras = document.querySelector('.barras');
+  barras.classList.toggle('active');
+}
+
+function toggleBars() {
+  const barras = document.querySelector('.barras');
+  const submenuGeneral = document.getElementById('submenu-general');
+
+  barras.classList.toggle('active');
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var barras = document.querySelector(".barras");
+  var submenuGeneral = document.querySelector(".submenu-general");
+  var header = document.querySelector("#header");
+
+  barras.addEventListener("click", function () {
+    submenuGeneral.classList.toggle("show");
+    header.classList.toggle("submenu-active");
+  });
+});
+
+
 function changeBackground(model, button) {
   if (button.classList.contains("clicked")) {
     return;
@@ -156,4 +180,5 @@ document.addEventListener("DOMContentLoaded", function () {
     hexagonEmpty.classList.add("show");
   }, 100);
 });
+
 
