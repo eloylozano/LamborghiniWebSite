@@ -98,6 +98,8 @@ function toggleBars() {
   barras.classList.toggle('active');
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var barras = document.querySelector(".barras");
   var submenuGeneral = document.querySelector(".submenu-general");

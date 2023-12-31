@@ -178,21 +178,21 @@ header {
   transform: translateY(0);
 }
 
-.submenu-general ul {
+.columnas ul {
   font-size: 0.9em;
   margin-top: 20px;
   transform: translateX(90px);
   list-style: none;
 }
 
-.submenu-general ul li {
+.columnas ul li {
   padding: 15px 0;
   position: relative;
   transition: color 0.5s;
   width: fit-content;
 }
 
-.submenu-general.show ul li::before {
+.columnas.show ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -204,12 +204,12 @@ header {
   transition: width 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.submenu-general.show ul li:hover::before {
+.columnas.show ul li:hover::before {
   width: 100%;
   transform-origin: bottom left;
 }
 
-.submenu-general ul li:hover {
+.columnas ul li:hover {
   color: white;
   cursor: pointer;
 }
@@ -223,14 +223,14 @@ header {
 .columna1,
 .columna2,
 .columna3 {
-  padding-right: 100px;
+  width: 450px;
 }
 
 .columnas ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: 5px;
   width: 0%;
   height: 1px;
   background-color: white;
@@ -258,6 +258,58 @@ header {
   filter: grayscale(100%); 
 }
 
+.submenu-general-contenedores{
+  display: flex;
+  margin-left: 130px;
+}
+
+.submenu-general-contenedores p{
+  letter-spacing: 2px;
+  color: #9e9e9e;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.submenu-general-contenedores ul{
+  margin: 0;
+  padding: 0;
+}
+
+
+.languajes {
+  text-align: center;
+  width: 450px;
+  cursor: pointer;
+}
+
+.languajes ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px ; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 350px; 
+  width: 100%;
+}
+
+.languajes ul li {
+  font-size: 1.1em ;
+  font-weight: 600;
+}
+
+.redes-sociales{
+  width: 450px;
+}
+
+.redes-sociales ul{
+  list-style: none;
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------------------------------------------- */
 .submenu-modelos {
   position: fixed;
   z-index: 10;
