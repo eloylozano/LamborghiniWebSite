@@ -1,3 +1,14 @@
+function marcado(elemento) {
+  // Elimina la clase 'modelo-seleccionado' de todos los elementos
+  var elementos = document.querySelectorAll('.nav-header-text');
+  elementos.forEach(function (el) {
+    el.classList.remove('modelo-seleccionado');
+  });
+
+  // Agrega la clase 'modelo-seleccionado' al elemento clicado
+  elemento.classList.add('modelo-seleccionado');
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var modelos = document.getElementById("modelos");
   var submenu = document.getElementById("submenu-modelos");

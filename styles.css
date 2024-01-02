@@ -43,6 +43,7 @@ header {
 
 .nav-header-left-logo {
   margin: 0 30px;
+  padding: 5px;
 }
 
 .nav-header-text {
@@ -79,6 +80,12 @@ header {
 
 .nav-header-text:hover::before {
   transform: translateY(0);
+}
+
+.modelo-seleccionado {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #3c3c3c;
 }
 
 .nav-header li {
@@ -170,7 +177,6 @@ header {
   padding-bottom: 30px;
   overflow: hidden;
   transition: transform 0.5s;
-  height: 600px;
 }
 .submenu-general.show {
   max-height: 750px;
