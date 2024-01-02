@@ -493,10 +493,89 @@ main {
 .text-video p {
   margin: 0;
 }
+/* --------------------------------------------------------------- */
+
+.hexagonos{
+  display: flex;
+}
+
+.hexagonos-izq {
+  transform: rotate(180deg);
+  width: 50px;
+  height: 50px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hexagonos-der {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.hexagono,
+.hexagono-white {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hexagono-white {
+  opacity: 0;
+}
+
+.hexagonos-izq:hover .hexagono {
+  opacity: 0;
+}
+
+.hexagonos-izq:hover .hexagono-white {
+  opacity: 1;
+}
+
+.hexagonos-der:hover .hexagono {
+  opacity: 0;
+}
+
+.hexagonos-der:hover .hexagono-white {
+  opacity: 1;
+}
+
+
+.moreinfo-container {
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+
+.moreinfo,
+.moreinfo-white {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.moreinfo-white {
+  opacity: 0;
+}
+
+.moreinfo-container:hover .moreinfo {
+  opacity: 0;
+}
+
+.moreinfo-container:hover .moreinfo-white {
+  opacity: 1;
+}
+
 
 .modelos-main {
   position: relative;
-  background-image: url(/assets/images/LamborghiniRevuelto.jpg);
+  background-image: url(/assets/images/slider_revuelto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 700px;
@@ -519,7 +598,6 @@ main {
 }
 
 .text-images h1 {
-  margin-top: 200px;
   margin-bottom: 0px;
   font-size: 6rem;
   width: 60%;
