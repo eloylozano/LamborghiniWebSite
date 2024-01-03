@@ -147,60 +147,69 @@ function handleConceptHover() {
 
 document.addEventListener("DOMContentLoaded", handleConceptHover);
 
-
-function handlesuperTrofeoHover() {
+document.addEventListener("DOMContentLoaded", function () {
   var superTrofeoElement = document.getElementById("superTrofeo");
-  var submenuSuperTrofeo = document.querySelector(".submenu-superTrofeo");
+  var submenuSuperTrofeo = document.getElementById("submenu-superTrofeo");
 
   superTrofeoElement.addEventListener("mouseover", function () {
-    submenuSuperTrofeo.style.opacity = "1";
-    submenuSuperTrofeo.style.visibility = "visible";
+      submenuSuperTrofeo.style.display = "block";
   });
 
   superTrofeoElement.addEventListener("mouseout", function () {
-    submenuSuperTrofeo.style.opacity = "0";
-    submenuSuperTrofeo.style.visibility = "hidden";
+      submenuSuperTrofeo.style.display = "none";
   });
 
   submenuSuperTrofeo.addEventListener("mouseover", function () {
-    submenuSuperTrofeo.style.opacity = "1";
-    submenuSuperTrofeo.style.visibility = "visible";
+      submenuSuperTrofeo.style.display = "block";
   });
 
   submenuSuperTrofeo.addEventListener("mouseout", function () {
-    submenuSuperTrofeo.style.opacity = "0";
-    submenuSuperTrofeo.style.visibility = "hidden";
+      submenuSuperTrofeo.style.display = "none";
   });
-}
+});
 
-document.addEventListener("DOMContentLoaded", handlesuperTrofeoHover);
+document.addEventListener("DOMContentLoaded", function () {
+  var mAutomovilisticoElement = document.getElementById("modelosAutomovilisticos");
+  var submenumAutomovilistico = document.getElementById("submenu-modelosAutomovilisticos");
 
-function handlemodelosAutomovilisticosHover() {
-  var modelosAutomovilisticosElement = document.getElementById("modelosAutomovilisticos");
-  var submenumodelosAutomovilisticos = document.querySelector(".submenu-modelosAutomovilisticos");
-
-  modelosAutomovilisticosElement.addEventListener("mouseover", function () {
-    submenumodelosAutomovilisticos.style.opacity = "1";
-    submenumodelosAutomovilisticos.style.visibility = "visible";
+  mAutomovilisticoElement.addEventListener("mouseover", function () {
+    submenumAutomovilistico.style.display = "block";
   });
 
-  modelosAutomovilisticosElement.addEventListener("mouseout", function () {
-    submenumodelosAutomovilisticos.style.opacity = "0";
-    submenumodelosAutomovilisticos.style.visibility = "hidden";
+  mAutomovilisticoElement.addEventListener("mouseout", function () {
+    submenumAutomovilistico.style.display = "none";
   });
 
-  submenumodelosAutomovilisticos.addEventListener("mouseover", function () {
-    submenumodelosAutomovilisticos.style.opacity = "1";
-    submenumodelosAutomovilisticos.style.visibility = "visible";
+  submenumAutomovilistico.addEventListener("mouseover", function () {
+    submenumAutomovilistico.style.display = "block";
   });
 
-  submenumodelosAutomovilisticos.addEventListener("mouseout", function () {
-    submenumodelosAutomovilisticos.style.opacity = "0";
-    submenumodelosAutomovilisticos.style.visibility = "hidden";
+  submenumAutomovilistico.addEventListener("mouseout", function () {
+    submenumAutomovilistico.style.display = "none";
   });
-}
+});
 
-document.addEventListener("DOMContentLoaded", handlemodelosAutomovilisticosHover);
+
+document.addEventListener("DOMContentLoaded", function () {
+  var experienceElement = document.getElementById("experience");
+  var submenuExperience = document.getElementById("submenu-experience");
+
+  experienceElement.addEventListener("mouseover", function () {
+    submenuExperience.style.display = "block";
+  });
+
+  experienceElement.addEventListener("mouseout", function () {
+    submenuExperience.style.display = "none";
+  });
+
+  submenuExperience.addEventListener("mouseover", function () {
+    submenuExperience.style.display = "block";
+  });
+
+  submenuExperience.addEventListener("mouseout", function () {
+    submenuExperience.style.display = "none";
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var clientservice = document.getElementById("clientservice");
