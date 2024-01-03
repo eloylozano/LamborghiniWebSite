@@ -1,12 +1,12 @@
 function marcado(elemento) {
   // Elimina la clase 'modelo-seleccionado' de todos los elementos
-  var elementos = document.querySelectorAll('.nav-header-text');
+  var elementos = document.querySelectorAll(".nav-header-text");
   elementos.forEach(function (el) {
-    el.classList.remove('modelo-seleccionado');
+    el.classList.remove("modelo-seleccionado");
   });
 
   // Agrega la clase 'modelo-seleccionado' al elemento clicado
-  elemento.classList.add('modelo-seleccionado');
+  elemento.classList.add("modelo-seleccionado");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -38,6 +38,116 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function handleHuracanHover() {
+  var huracanElement = document.getElementById("huracan");
+  var submenuHuracan = document.querySelector(".submenu-huracan");
+
+  huracanElement.addEventListener("mouseover", function () {
+    submenuHuracan.style.opacity = "1";
+    submenuHuracan.style.visibility = "visible";
+  });
+
+  huracanElement.addEventListener("mouseout", function () {
+    submenuHuracan.style.opacity = "0";
+    submenuHuracan.style.visibility = "hidden";
+  });
+
+  submenuHuracan.addEventListener("mouseover", function () {
+    submenuHuracan.style.opacity = "1";
+    submenuHuracan.style.visibility = "visible";
+  });
+
+  submenuHuracan.addEventListener("mouseout", function () {
+    submenuHuracan.style.opacity = "0";
+    submenuHuracan.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handleHuracanHover);
+
+function handleUrusHover() {
+  var urusElement = document.getElementById("urus");
+  var submenuUrus = document.querySelector(".submenu-urus");
+
+  urusElement.addEventListener("mouseover", function () {
+    submenuUrus.style.opacity = "1";
+    submenuUrus.style.visibility = "visible";
+  });
+
+  urusElement.addEventListener("mouseout", function () {
+    submenuUrus.style.opacity = "0";
+    submenuUrus.style.visibility = "hidden";
+  });
+
+  submenuUrus.addEventListener("mouseover", function () {
+    submenuUrus.style.opacity = "1";
+    submenuUrus.style.visibility = "visible";
+  });
+
+  submenuUrus.addEventListener("mouseout", function () {
+    submenuUrus.style.opacity = "0";
+    submenuUrus.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handleUrusHover);
+
+
+function handleSerieLimitadaHover() {
+  var serielimitadaElement = document.getElementById("serie-limitada");
+  var submenuserielimitada = document.querySelector(".submenu-serielimitada");
+
+  serielimitadaElement.addEventListener("mouseover", function () {
+    submenuserielimitada.style.opacity = "1";
+    submenuserielimitada.style.visibility = "visible";
+  });
+
+  serielimitadaElement.addEventListener("mouseout", function () {
+    submenuserielimitada.style.opacity = "0";
+    submenuserielimitada.style.visibility = "hidden";
+  });
+
+  submenuserielimitada.addEventListener("mouseover", function () {
+    submenuserielimitada.style.opacity = "1";
+    submenuserielimitada.style.visibility = "visible";
+  });
+
+  submenuserielimitada.addEventListener("mouseout", function () {
+    submenuserielimitada.style.opacity = "0";
+    submenuserielimitada.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handleSerieLimitadaHover);
+
+function handleConceptHover() {
+  var conceptElement = document.getElementById("concept");
+  var submenuConcept = document.querySelector(".submenu-concept");
+
+  conceptElement.addEventListener("mouseover", function () {
+    submenuConcept.style.opacity = "1";
+    submenuConcept.style.visibility = "visible";
+  });
+
+  conceptElement.addEventListener("mouseout", function () {
+    submenuConcept.style.opacity = "0";
+    submenuConcept.style.visibility = "hidden";
+  });
+
+  submenuConcept.addEventListener("mouseover", function () {
+    submenuConcept.style.opacity = "1";
+    submenuConcept.style.visibility = "visible";
+  });
+
+  submenuConcept.addEventListener("mouseout", function () {
+    submenuConcept.style.opacity = "0";
+    submenuConcept.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handleConceptHover);
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var clientservice = document.getElementById("clientservice");
   var submenu = document.getElementById("submenu-servicios");
@@ -66,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
     submenu.classList.remove("show");
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var motorsport = document.getElementById("motorsport");
@@ -98,18 +207,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleBars() {
-  const barras = document.querySelector('.barras');
-  barras.classList.toggle('active');
+  const barras = document.querySelector(".barras");
+  barras.classList.toggle("active");
 }
 
 function toggleBars() {
-  const barras = document.querySelector('.barras');
-  const submenuGeneral = document.getElementById('submenu-general');
+  const barras = document.querySelector(".barras");
+  const submenuGeneral = document.getElementById("submenu-general");
 
-  barras.classList.toggle('active');
+  barras.classList.toggle("active");
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var barras = document.querySelector(".barras");
@@ -121,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
     header.classList.toggle("submenu-active");
   });
 });
-
 
 function changeBackground(model, button) {
   if (button.classList.contains("clicked")) {
@@ -193,5 +299,3 @@ document.addEventListener("DOMContentLoaded", function () {
     hexagonEmpty.classList.add("show");
   }, 100);
 });
-
-
