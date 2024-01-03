@@ -148,6 +148,60 @@ function handleConceptHover() {
 document.addEventListener("DOMContentLoaded", handleConceptHover);
 
 
+function handlesuperTrofeoHover() {
+  var superTrofeoElement = document.getElementById("superTrofeo");
+  var submenuSuperTrofeo = document.querySelector(".submenu-superTrofeo");
+
+  superTrofeoElement.addEventListener("mouseover", function () {
+    submenuSuperTrofeo.style.opacity = "1";
+    submenuSuperTrofeo.style.visibility = "visible";
+  });
+
+  superTrofeoElement.addEventListener("mouseout", function () {
+    submenuSuperTrofeo.style.opacity = "0";
+    submenuSuperTrofeo.style.visibility = "hidden";
+  });
+
+  submenuSuperTrofeo.addEventListener("mouseover", function () {
+    submenuSuperTrofeo.style.opacity = "1";
+    submenuSuperTrofeo.style.visibility = "visible";
+  });
+
+  submenuSuperTrofeo.addEventListener("mouseout", function () {
+    submenuSuperTrofeo.style.opacity = "0";
+    submenuSuperTrofeo.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handlesuperTrofeoHover);
+
+function handlemodelosAutomovilisticosHover() {
+  var modelosAutomovilisticosElement = document.getElementById("modelosAutomovilisticos");
+  var submenumodelosAutomovilisticos = document.querySelector(".submenu-modelosAutomovilisticos");
+
+  modelosAutomovilisticosElement.addEventListener("mouseover", function () {
+    submenumodelosAutomovilisticos.style.opacity = "1";
+    submenumodelosAutomovilisticos.style.visibility = "visible";
+  });
+
+  modelosAutomovilisticosElement.addEventListener("mouseout", function () {
+    submenumodelosAutomovilisticos.style.opacity = "0";
+    submenumodelosAutomovilisticos.style.visibility = "hidden";
+  });
+
+  submenumodelosAutomovilisticos.addEventListener("mouseover", function () {
+    submenumodelosAutomovilisticos.style.opacity = "1";
+    submenumodelosAutomovilisticos.style.visibility = "visible";
+  });
+
+  submenumodelosAutomovilisticos.addEventListener("mouseout", function () {
+    submenumodelosAutomovilisticos.style.opacity = "0";
+    submenumodelosAutomovilisticos.style.visibility = "hidden";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", handlemodelosAutomovilisticosHover);
+
 document.addEventListener("DOMContentLoaded", function () {
   var clientservice = document.getElementById("clientservice");
   var submenu = document.getElementById("submenu-servicios");
