@@ -631,6 +631,19 @@ main {
 }
 /* --------------------------------------------------------------- */
 
+.modelos-main {
+  position: relative;
+  background-image: url(/assets/images/slider_revuelto.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 800px;
+  overflow: hidden;
+  background-position: 0% 50%; /* Añadimos la posición inicial */
+  transition: background-position 0.5s ease;
+}
+
+
 .hexagonos{
   display: flex;
 }
@@ -686,9 +699,29 @@ main {
   cursor: pointer;
 }
 
+.nombres-slider-revuelto{
+  display: block;
+}
 
+.nombres-slider-revuelto h1{
+  display: flex;
+}
 
+.nombres-slider-urus {
+  display: none;
+}
 
+.nombres-slider-urus h1{
+  display: flex;
+}
+
+.nombres-slider-huracan {
+  display: none;
+}
+
+.nombres-slider-huracan h1{
+  display: flex;
+}
 
 .descubreModelos {
   margin: 100px 0 0 0;
@@ -721,46 +754,6 @@ main {
   opacity: 1;
 }
 
-.modelos-main {
-  position: relative;
-  background-image: url(/assets/images/slider_revuelto.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-height: 800px;
-  overflow: hidden;
-}
-
-.text-images {
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 170px;
-  transform: translateY(-50%);
-  color: white;
-}
-
-.text-images h2 {
-  margin-top: 100px;
-  font-size: 1.8em;
-  font-weight: 600;
-}
-
-.text-images h1 {
-  margin-bottom: 0px;
-  font-size: 6rem;
-  width: 60%;
-  padding: 0;
-}
-
-.text-images p {
-  font-size: 1.8em;
-  font-weight: 600;
-}
-
-.text-images p {
-  margin: 0;
-}
 
 .configurador-main {
   position: relative;
@@ -829,6 +822,38 @@ main {
     transform: translateY(0);
   }
 }
+
+.text-images {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.text-images h2 {
+  margin-top: 100px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.text-images h1 {
+  margin-bottom: 0px;
+  font-size: 6rem;
+  width: 60%;
+  padding: 0;
+}
+
+.text-images p {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.text-images p {
+  margin: 0;
+}
+
 
 .hexagons {
   width: 60px;
