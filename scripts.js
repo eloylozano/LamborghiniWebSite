@@ -147,69 +147,7 @@ function handleConceptHover() {
 
 document.addEventListener("DOMContentLoaded", handleConceptHover);
 
-document.addEventListener("DOMContentLoaded", function () {
-  var superTrofeoElement = document.getElementById("superTrofeo");
-  var submenuSuperTrofeo = document.getElementById("submenu-superTrofeo");
 
-  superTrofeoElement.addEventListener("mouseover", function () {
-      submenuSuperTrofeo.style.display = "block";
-  });
-
-  superTrofeoElement.addEventListener("mouseout", function () {
-      submenuSuperTrofeo.style.display = "none";
-  });
-
-  submenuSuperTrofeo.addEventListener("mouseover", function () {
-      submenuSuperTrofeo.style.display = "block";
-  });
-
-  submenuSuperTrofeo.addEventListener("mouseout", function () {
-      submenuSuperTrofeo.style.display = "none";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var mAutomovilisticoElement = document.getElementById("modelosAutomovilisticos");
-  var submenumAutomovilistico = document.getElementById("submenu-modelosAutomovilisticos");
-
-  mAutomovilisticoElement.addEventListener("mouseover", function () {
-    submenumAutomovilistico.style.display = "block";
-  });
-
-  mAutomovilisticoElement.addEventListener("mouseout", function () {
-    submenumAutomovilistico.style.display = "none";
-  });
-
-  submenumAutomovilistico.addEventListener("mouseover", function () {
-    submenumAutomovilistico.style.display = "block";
-  });
-
-  submenumAutomovilistico.addEventListener("mouseout", function () {
-    submenumAutomovilistico.style.display = "none";
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  var experienceElement = document.getElementById("experience");
-  var submenuExperience = document.getElementById("submenu-experience");
-
-  experienceElement.addEventListener("mouseover", function () {
-    submenuExperience.style.display = "block";
-  });
-
-  experienceElement.addEventListener("mouseout", function () {
-    submenuExperience.style.display = "none";
-  });
-
-  submenuExperience.addEventListener("mouseover", function () {
-    submenuExperience.style.display = "block";
-  });
-
-  submenuExperience.addEventListener("mouseout", function () {
-    submenuExperience.style.display = "none";
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   var clientservice = document.getElementById("clientservice");
@@ -240,11 +178,71 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function mostrarSubmenu() {
+  var superTrofeo = document.getElementById("superTrofeo");
+  var modelosAutomovilisticos = document.getElementById("modelosAutomovilisticos");
+  var experience = document.getElementById("experience");
+  var submenuSuperTrofeo = document.getElementById("submenu-superTrofeo");
+  var submenuModelosAutomovilisticos = document.getElementById("submenu-modelosAutomovilisticos");
+  var submenuExperience = document.getElementById("submenu-experience");
+
+  // Función para mostrar el submenu
+  function mostrar(submenu) {
+    submenu.style.display = "block";
+  }
+
+  // Función para ocultar el submenu
+  function ocultar(submenu) {
+    submenu.style.display = "none";
+  }
+
+  // Agregar eventos de mouseover para mostrar los submenus
+  superTrofeo.addEventListener("mouseover", function () {
+    mostrar(submenuSuperTrofeo);
+    ocultar(submenuModelosAutomovilisticos);
+    ocultar(submenuExperience);
+  });
+
+  modelosAutomovilisticos.addEventListener("mouseover", function () {
+    mostrar(submenuModelosAutomovilisticos);
+    ocultar(submenuSuperTrofeo);
+    ocultar(submenuExperience);
+  });
+
+  experience.addEventListener("mouseover", function () {
+    mostrar(submenuExperience);
+    ocultar(submenuSuperTrofeo);
+    ocultar(submenuModelosAutomovilisticos);
+  });
+
+  // Agregar eventos de mouseout para ocultar los submenus
+  superTrofeo.addEventListener("mouseout", function (e) {
+    if (!e.relatedTarget || !e.relatedTarget.closest("#superTrofeo, #submenu-superTrofeo")) {
+      ocultar(submenuSuperTrofeo);
+    }
+  });
+
+  modelosAutomovilisticos.addEventListener("mouseout", function (e) {
+    if (!e.relatedTarget || !e.relatedTarget.closest("#modelosAutomovilisticos, #submenu-modelosAutomovilisticos")) {
+      ocultar(submenuModelosAutomovilisticos);
+    }
+  });
+
+  experience.addEventListener("mouseout", function (e) {
+    if (!e.relatedTarget || !e.relatedTarget.closest("#experience, #submenu-experience")) {
+      ocultar(submenuExperience);
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", mostrarSubmenu);
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  var motorsport = document.getElementById("motorsport");
+  var clientservice = document.getElementById("clientservice");
   var submenu = document.getElementById("submenu-motorsport");
   var header = document.getElementById("header");
-  var concesionarios = document.getElementById("concesionarios");
+  var beyond = document.getElementById("beyond");
   var motorsport = document.getElementById("motorsport");
 
   motorsport.addEventListener("mouseover", function () {
@@ -254,13 +252,13 @@ document.addEventListener("DOMContentLoaded", function () {
   submenu.addEventListener("mouseleave", function (event) {
     if (
       !submenu.contains(event.relatedTarget) &&
-      !concesionarios.contains(event.relatedTarget)
+      !beyond.contains(event.relatedTarget)
     ) {
       submenu.classList.remove("show");
     }
   });
 
-  concesionarios.addEventListener("mouseover", function () {
+  beyond.addEventListener("mouseover", function () {
     submenu.classList.remove("show");
   });
 
