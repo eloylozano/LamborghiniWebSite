@@ -352,6 +352,7 @@ header {
   padding: 15px 0;
   transition: color 0.5s;
   opacity: 0;
+  cursor: pointer;
 }
 
 .submenu-modelos.show ul li {
@@ -480,7 +481,7 @@ header {
   padding-bottom: 30px;
   max-height: 0px;
   overflow: hidden;
-  transition: transform 0.5s; /* Añadido para la transición inversa */
+  transition: transform 0.5s; 
 }
 
 .submenu-servicios.show {
@@ -542,7 +543,7 @@ header {
   transition: transform 0.5s;
 }
 
-.submenu-motorsport ul {
+.submenu-motorsport-lvl2{
   font-size: 0.9em;
   width: 250px;
   margin-left: 360px;
@@ -566,8 +567,9 @@ header {
   cursor: pointer;
 }
 
-.submenu-superTrofeo{
-  transform: translateX(-250px);
+.submenu-superTrofeo ul{
+  list-style: none;
+  margin-left: 150px;
   width: auto;
   z-index: -5;
 }
@@ -580,10 +582,11 @@ header {
   display: block; 
 }
 
-.submenu-modelosAutomovilisticos{
-  transform: translateX(-250px);
+.submenu-modelosAutomovilisticos ul{
+  list-style: none;
+  margin-left: 150px;
   width: auto;
-  z-index: -6;
+  z-index: -5;
 }
 
 .submenu-motorsport .submenu-modelosAutomovilisticos {
@@ -594,10 +597,11 @@ header {
   display: block;
 }
 
-.submenu-experience{
-  transform: translateX(-250px);
+.submenu-experience ul{
+  list-style: none;
+  margin-left: 150px;
   width: auto;
-  z-index: -7;
+  z-index: -5;
 }
 
 .submenu-motorsport .submenu-experience {
