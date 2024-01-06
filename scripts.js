@@ -244,48 +244,6 @@ document.addEventListener("DOMContentLoaded", mostrarSubmenu);
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var modelos = [
-    "/assets/images/slider_revuelto.jpg",
-    "/assets/images/slider_urus.jpg",
-    "/assets/images/slider_sterrato.jpg"
-  ];
-
-  var currentIndex = 0;
-  var modelosMain = document.querySelector(".modelos-main");
-
-  function changeBackground() {
-    modelosMain.style.backgroundImage = "url(" + modelos[currentIndex] + ")";
-  }
-
-  changeBackground();
-
-  document.querySelector(".hexagonos-izq").addEventListener("click", function() {
-    currentIndex = (currentIndex - 1 + modelos.length) % modelos.length;
-    changeBackground();
-  });
-
-  document.querySelector(".hexagonos-der").addEventListener("click", function() {
-    currentIndex = (currentIndex + 1) % modelos.length;
-    changeBackground();
-
-    // Si alcanza el último modelo, vuelve al primero
-    if (currentIndex === 0) {
-      modelosMain.style.transition = "none"; // Desactivar la transición
-      currentIndex = modelos.length - 1;
-      changeBackground();
-      // Forzar un reflow
-      modelosMain.offsetHeight;
-      modelosMain.style.transition = ""; // Reactivar la transición
-    }
-  });
-});
-
-
-
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -249,7 +249,7 @@ header {
   transform-origin: bottom left;
 }
 
-.submenu-general hr{
+.submenu-general hr {
   width: 85%;
   height: 1px;
   border: none;
@@ -261,26 +261,25 @@ header {
 }
 
 #header.submenu-active .img img {
-  filter: grayscale(100%); 
+  filter: grayscale(100%);
 }
 
-.submenu-general-contenedores{
+.submenu-general-contenedores {
   display: flex;
   margin-left: 130px;
 }
 
-.submenu-general-contenedores p{
+.submenu-general-contenedores p {
   letter-spacing: 2px;
   color: #9e9e9e;
   font-weight: 700;
   width: fit-content;
 }
 
-.submenu-general-contenedores ul{
+.submenu-general-contenedores ul {
   margin: 0;
   padding: 0;
 }
-
 
 .languajes {
   text-align: center;
@@ -291,24 +290,24 @@ header {
 .languajes ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 40px ; 
+  gap: 20px 40px;
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 350px; 
+  max-width: 350px;
   width: 100%;
 }
 
 .languajes ul li {
-  font-size: 1.1em ;
+  font-size: 1.1em;
   font-weight: 600;
 }
 
-.redes-sociales{
+.redes-sociales {
   width: 450px;
 }
 
-.redes-sociales ul{
+.redes-sociales ul {
   list-style: none;
   display: flex;
   width: 75%;
@@ -332,7 +331,6 @@ header {
   overflow: hidden;
   transition: transform 0.5s;
 }
-
 
 .submenu-modelos.show {
   max-height: 500px;
@@ -359,7 +357,7 @@ header {
   opacity: 1;
 }
 
-.submenu-modelos a{
+.submenu-modelos a {
   color: #9e9e9e;
   text-decoration: none;
 }
@@ -396,7 +394,6 @@ header {
 .submenu-huracan ul li:not(:hover) {
   color: #9e9e9e;
 }
-
 
 .submenu-urus {
   transform: translateX(-210px);
@@ -444,7 +441,6 @@ header {
   color: #9e9e9e;
 }
 
-
 .submenu-concept {
   transform: translateX(-610px);
   z-index: -5;
@@ -481,7 +477,7 @@ header {
   padding-bottom: 30px;
   max-height: 0px;
   overflow: hidden;
-  transition: transform 0.5s; 
+  transition: transform 0.5s;
 }
 
 .submenu-servicios.show {
@@ -533,7 +529,7 @@ header {
   padding-bottom: 30px;
   max-height: 0px;
   overflow: hidden;
-  transition: transform 0.5s; 
+  transition: transform 0.5s;
 }
 
 .submenu-motorsport.show {
@@ -543,7 +539,7 @@ header {
   transition: transform 0.5s;
 }
 
-.submenu-motorsport-lvl2{
+.submenu-motorsport-lvl2 {
   font-size: 0.9em;
   margin-left: 450px;
   margin-top: 20px;
@@ -570,7 +566,7 @@ header {
   padding-left: 100px;
 }
 
-.submenu-superTrofeo ul{
+.submenu-superTrofeo ul {
   list-style: none;
 }
 
@@ -579,7 +575,7 @@ header {
   padding-left: 100px;
 }
 
-.submenu-modelosAutomovilisticos ul{
+.submenu-modelosAutomovilisticos ul {
   list-style: none;
 }
 
@@ -588,10 +584,9 @@ header {
   padding-left: 100px;
 }
 
-.submenu-experience ul{
+.submenu-experience ul {
   list-style: none;
 }
-
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -630,21 +625,17 @@ main {
   margin: 0;
 }
 /* --------------------------------------------------------------- */
-
 .modelos-main {
   position: relative;
-  background-image: url(/assets/images/slider_revuelto.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  min-height: 800px;
   overflow: hidden;
-  background-position: 0% 50%; /* Añadimos la posición inicial */
-  transition: background-position 0.5s ease;
+  height: 800px;
+  background-image: url(assets/images/slider_revuelto.jpg);
+  background-position: center top; 
+  background-size: cover;
+  transition: 1s ease;
 }
 
-
-.hexagonos{
+.hexagonos {
   display: flex;
 }
 
@@ -664,7 +655,6 @@ main {
   padding: 0;
   cursor: pointer;
 }
-
 
 .hexagono,
 .hexagono-white {
@@ -693,17 +683,18 @@ main {
   opacity: 1;
 }
 
+
 .moreinfo-container {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
 
-.nombres-slider-revuelto{
+.nombres-slider-revuelto {
   display: block;
 }
 
-.nombres-slider-revuelto h1{
+.nombres-slider-revuelto h1 {
   display: flex;
 }
 
@@ -711,7 +702,7 @@ main {
   display: none;
 }
 
-.nombres-slider-urus h1{
+.nombres-slider-urus h1 {
   display: flex;
 }
 
@@ -719,18 +710,18 @@ main {
   display: none;
 }
 
-.nombres-slider-huracan h1{
+.nombres-slider-huracan h1 {
   display: flex;
 }
 
 .descubreModelos {
   margin: 100px 0 0 0;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.descubreModelos-txt h4{
-  margin-left: 20px; 
+.descubreModelos-txt h4 {
+  margin-left: 20px;
   font-size: 1.2em;
   font-weight: 100;
 }
@@ -753,7 +744,6 @@ main {
 .moreinfo-container:hover .moreinfo-white {
   opacity: 1;
 }
-
 
 .configurador-main {
   position: relative;
@@ -853,7 +843,6 @@ main {
 .text-images p {
   margin: 0;
 }
-
 
 .hexagons {
   width: 60px;

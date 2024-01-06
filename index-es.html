@@ -234,11 +234,11 @@
         <h2>MODELOS</h2>
         <div class="controles">
           <div class="hexagonos">
-            <div class="hexagonos-izq">
+            <div id="btn-left" class="hexagonos-izq">
               <img class="hexagono" src="/assets/images/hexagonoEmpty.png" width="50px">
               <img class="hexagono-white" src="/assets/images/hexagonoFull.png" width="50px">
             </div>
-            <div class="hexagonos-der">
+            <div id="btn-right" class="hexagonos-der">
               <img class="hexagono" src="/assets/images/hexagonoEmpty.png" width="50px">
               <img class="hexagono-white" src="/assets/images/hexagonoFull.png" width="50px">
             </div>
@@ -246,20 +246,7 @@
         </div>
         <div class="nombres-slider">
           <div class="nombres-slider-revuelto">
-            <h1>
-              <div class="letra">R</div>
-              <div class="letra">E</div>
-              <div class="letra">V</div>
-              <div class="letra">U</div>
-              <div class="letra">E</div>
-              <div class="letra">L</div>
-              <div class="letra">T</div>
-              <div class="letra">O</div>
-              <div class="letra"></div>
-              <div class="letra"></div>
-              <div class="letra"></div>
-              <div class="letra"></div>
-            </h1>
+            <h1>REVUELTO</h1>
             <p>FROM NOW ON</p>
           </div>
         </div>
@@ -274,6 +261,7 @@
         </div>
       </div>
     </div>
+  </div>
 
 
     <div class="configurador-main">
@@ -386,6 +374,105 @@
       </div>
     </div>
   </footer>
+  <style>
+    .nombres-slider h1{
+      transform: translateY(0px); 
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .nombres-slider p{
+      transform: translateX(0px); 
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .nombres-slider h1.show{
+      opacity: 1;
+      transform: translate(0px);
+      animation: fromTop 1s ease-in-out;
+    }
+
+    .nombres-slider p.show{
+      opacity: 1;
+      transform: translate(0px);
+      animation: fromLeft 1s ease-in-out;
+    } 
+
+    @keyframes fromTop {
+      from {
+        transform: translateY(-500px);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fromLeft {
+      from {
+        transform: translateX(-500px);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+</style>
+  
+  <script>
+    const modelos = [
+      { nombre: "revuelto", descripcion: "FROM NOW ON" },
+      { nombre: "sterrato", descripcion: "BEYOND THE CONCRETE" },
+      { nombre: "urus", descripcion: "UNLOCK ANY ROAD" }
+      // Agrega más modelos según sea necesario
+    ];
+  
+    let modeloActualIndex = 0;
+  
+    function cambiarFondoYTexto() {
+      const modelosMain = document.querySelector(".modelos-main");
+      const h1 = document.querySelector(".nombres-slider-revuelto h1");
+      const descripcion = document.querySelector(".nombres-slider-revuelto p");
+  
+      modelosMain.style.transition = "background-image 2s ease";
+      modelosMain.style.backgroundImage = `url(/assets/images/slider_${modelos[modeloActualIndex].nombre}.jpg)`;
+  
+      h1.classList.remove("show");
+    
+      descripcion.classList.remove("show");
+  
+      setTimeout(() => {
+        h1.textContent = modelos[modeloActualIndex].nombre.toUpperCase();
+        descripcion.textContent = modelos[modeloActualIndex].descripcion;
+  
+        h1.classList.add("show");
+        descripcion.classList.add("show");
+      }, 100);
+    }
+  
+    document.getElementById("btn-left").addEventListener("click", function () {
+      modeloActualIndex = (modeloActualIndex - 1 + modelos.length) % modelos.length;
+      cambiarFondoYTexto();
+    });
+  
+    document.getElementById("btn-right").addEventListener("click", function () {
+      modeloActualIndex = (modeloActualIndex + 1) % modelos.length;
+      cambiarFondoYTexto();
+    });
+  
+    // Recargar la página al hacer clic en hexágonos
+    document.querySelector('.hexagons').addEventListener('click', function () {
+      location.reload();
+    });
+  
+    // Inicializar el fondo con el primer modelo
+    cambiarFondoYTexto();
+  
+    // Limpiar la transición después de que se complete
+    document.querySelector(".modelos-main").addEventListener("transitionend", function () {
+      this.style.transition = "";
+    });
+  </script>
+  
 </body>
 
 </html>
