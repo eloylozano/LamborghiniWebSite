@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamborghini · Página Oficial</title>
+  <link rel="stylesheet" href="styles-modelos.css">
+  <script src="scripts.js"></script>
+  <link rel="icon" href="assets/images/logo-lamborghini.svg">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="nav-header">
+      <ul class="nav-header-left">
+        <li class="nav-header-left-logo" id="logo">
+          <a href="index-es.html"><img src="assets/images/logo-lamborghini.svg" width="50px"
+              alt="logo-lamborghini" /></a>
+        </li>
+        <li class="nav-header-text" id="modelos" onclick="marcado(this)">MODELOS</li>
+        <li class="nav-header-text" id="beyond" onclick="marcado(this)">BEYOND</li>
+        <li class="nav-header-text" id="clientservice" onclick="marcado(this)">SERVICIO AL CLIENTE</li>
+        <li class="nav-header-text" id="motorsport" onclick="marcado(this)">MOTORSPORT</li>
+      </ul>
+      <ul class="nav-header-right">
+        <li class="nav-header-text" id="concesionarios" onclick="marcado(this)">CONCESIONARIOS</li>
+        <li class="nav-header-text" onclick="marcado(this)">MUSEO</li>
+        <li class="nav-header-text" onclick="marcado(this)">STORE</li>
+        <li class="img">
+          <div class="icon-container">
+            <img class="icon-smoke" src="assets/images/logo-chat-smoke.png" width="30px" />
+            <img class="icon-white" src="assets/images/logo-chat-white.png" width="30px" />
+          </div>
+        </li>
+        <li class="img">
+          <div class="icon-container">
+            <img class="icon-smoke" src="assets/images/logo-lupa-smokepng.png" width="30px" />
+            <img class="icon-white" src="assets/images/logo-lupa-white.png" width="30px" />
+          </div>
+        </li>
+        <li class="img">
+          <div class="icon-container">
+            <div class="barras" onclick="toggleBars()">
+              <div class="barra1"></div>
+              <div class="barra2"></div>
+              <div class="barra3"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="submenu-modelos" id="submenu-modelos">
+    <ul>
+      <li><a href="">REVUELTO</a></li>
+      <li id="huracan"><a href="">HURACAN</a></li>
+      <li id="urus"><a href="">URUS</a>
+      </li>
+      <li><a href="">SEGUNDA MANO</a></li>
+      <li id="serie-limitada"><a href="">SERIE LIMITADA</a></li>
+      <li id="concept"><a href="">CONCEPT</a></li>
+    </ul>
+    <div class="submenu-huracan">
+      <ul>
+        <li>HURACÁN STERRATO</li>
+        <li>HURACÁN TECNICA</li>
+        <li>HURACÁN STO</li>
+        <li>HURACÁN EVO SPYDER</li>
+      </ul>
+    </div>
+    <div class="submenu-urus">
+      <ul>
+        <li>URUS S</li>
+        <li>URUS PERFORMANTE</li>
+      </ul>
+    </div>
+    <div class="submenu-serielimitada">
+      <ul>
+        <li>COUNTACH LPI 800-4</li>
+        <li>SIÁN FKP 37</li>
+        <li>SIÁN ROADSTER</li>
+      </ul>
+    </div>
+    <div class="submenu-concept">
+      <ul>
+        <li>TERZO MILLENNIO</li>
+        <li>ASTERION</li>
+        <li>ESTOQUE</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="submenu-servicios" id="submenu-servicios">
+    <ul>
+      <li>CONECTIVITY</li>
+      <li>APLICACIÓN PARA CLIENTES</li>
+      <li>MOBILITY PROGRAM</li>
+      <li>CLÁSICOS</li>
+      <li>SERVICE</li>
+      <li>CAMPAÑAS DE REVISIÓN</li>
+    </ul>
+  </div>
+  <div class="submenu-motorsport" id="submenu-motorsport">
+    <ul class="submenu-motorsport-lvl2">
+      <li>SC63</li>
+      <li id="superTrofeo">SUPER TROFEO</li>
+      <li>GT3</li>
+      <li id="modelosAutomovilisticos">MODELOS AUTOMOVILÍSTICOS</li>
+      <li>PILOTOS</li>
+      <li>NOTICIAS SOBRE AUTOMOVILISMO</li>
+      <li id="experience">EXPERIENCE</li>
+      <li>ESPORTS</li>
+    </ul>
+    <div class="submenu-superTrofeo" id="submenu-superTrofeo">
+      <ul>
+        <li>SUPER TROFEO ASIA</li>
+        <li>SUPER TROFEO EUROPA</li>
+        <li>SUPER TROFEO NORTEAMERICA</li>
+        <li>SUPER TROFEO WORLD FINALS</li>
+        <li>CALENDARIO Y RESULTADOS</li>
+      </ul>
+    </div>
+     <div class="submenu-modelosAutomovilisticos" id="submenu-modelosAutomovilisticos">
+      <ul>
+        <li>HURACÁN GT3 EVO2</li>
+        <li>HURACÁN SUPER TROFEO EVO2</li>
+        <li>SC18 ALSTON</li>
+        <li>ESENZA SCV12</li>
+        <li>SC20</li>
+        <li>HERITAGE</li>
+      </ul>
+    </div>
+    <div class="submenu-experience" id="submenu-experience">
+      <ul>
+        <li>LAMBORGHINI PILOTA</li>
+        <li>SUPER TROFEO VIP PROGRAM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="submenu-general" id="submenu-general">
+    <div class="columnas">
+      <div class="columna1">
+        <ul>
+          <li>PERSONALIZACIÓN</li>
+          <li>ACCESORIOS</li>
+          <li>SERVICIOS FINANCIEROS</li>
+          <li>WARRANTY EXTENSION</li>
+        </ul>
+      </div>
+      <div class="columna2">
+        <ul>
+          <li>DISEÑO</li>
+          <li>INNOVACIÓN Y EXCELENCIA</li>
+          <li>SOSTENIBILIDAD</li>
+          <li>HISTORIA</li>
+        </ul>
+      </div>
+      <div class="columna3">
+        <ul>
+          <li>PROGRAMAS DE CONDUCCIÓN</li>
+          <li>LOUNGE</li>
+          <li>CLUB</li>
+          <li>NOTICIAS</li>
+          <li>PODCAST</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="submenu-general-contenedores">
+      <div class="submenu-general-contenedor">
+        <div class="languajes">
+          <p>IDIOMA</p>
+          <ul>
+            <li>ENGLISH</li>
+            <li>ITALIAN</li>
+            <li>FRENCH</li>
+            <li style="color: #9e9e9e">SPANISH</li>
+            <li>GERMAN</li>
+            <li>CHINESE</li>
+            <li>JAPANESE</li>
+            <li>RUSSIAN</li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu-general-contenedor">
+        <div class="redes-sociales">
+          <p>REDES SOCIALES</p>
+          <ul>
+            <li><a href="https://www.instagram.com/lamborghini/?hl=en" target="_blank"><img
+                  src="assets/images/logo-instagram.png" width="20px"></a></li>
+
+            <li><a href="https://www.facebook.com/Lamborghini/" target="_blank"><img
+                  src="assets/images/logo-facebook.png" width="20px"></a></li>
+
+            <li><a href="https://twitter.com/Lamborghini" target="_blank"><img src="assets/images/logo-youtube.png"
+                  width="20px"></a></li>
+
+            <li><a href="https://twitter.com/Lamborghini" target="_blank"><img src="assets/images/logo-X.png"
+                  width="20px"></a></li>
+            <li><a href="https://www.tiktok.com/@lamborghini?lang=en" target="_blank"><img
+                  src="assets/images/logo-tiktok.png" width="20px"></a></li>
+
+            <li><a href="https://www.linkedin.com/company/automobili-lamborghini-s-p-a-/" target="_blank"><img
+                  src="assets/images/logo-linkedin.png" width="20px"></a></li>
+
+            <li><a href="https://discord.com/invite/vet6ZBjpFd" target="_blank"><img
+                  src="assets/images/logo-discord.png" width="20px"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="submenu-general-contenedor">
+        <div class="ajustes">
+          <p>AJUSTES</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+
+  </main>
+  <footer>
+    <div class="footer-contenedor">
+      <div class="footer-rrss">
+        <section>
+          <ul>
+            <li>EMPRESA</li>
+            <li>EMPLEO</li>
+            <li>SOSTENIBILIDAD</li>
+            <li>AVISO LEGAL Y PRIVACIDAD</li>
+            <li>MAPA DEL SITIO</li>
+            <li>ACCESIBILIDAD</li>
+            <li>FINACIALS</li>
+            <li>CONTACTO</li>
+            <li>MEDIA CENTERS</li>
+            <li>CONFIGURACIÓN DE COOKIES</li>
+            <li>NEWSLETTER</li>
+          </ul>
+        </section>
+        <aside>
+          <ul>
+            <li><a href="https://www.instagram.com/lamborghini/?hl=en" target="_blank"><img
+                  src="assets/images/logo-instagram.png" width="20px"></a></li>
+
+            <li><a href="https://www.facebook.com/Lamborghini/" target="_blank"><img
+                  src="assets/images/logo-facebook.png" width="20px"></a></li>
+
+            <li><a href="https://twitter.com/Lamborghini" target="_blank"><img src="assets/images/logo-youtube.png"
+                  width="20px"></a></li>
+
+            <li><a href="https://twitter.com/Lamborghini" target="_blank"><img src="assets/images/logo-X.png"
+                  width="20px"></a></li>
+            <li><a href="https://www.tiktok.com/@lamborghini?lang=en" target="_blank"><img
+                  src="assets/images/logo-tiktok.png" width="20px"></a></li>
+
+            <li><a href="https://www.linkedin.com/company/automobili-lamborghini-s-p-a-/" target="_blank"><img
+                  src="assets/images/logo-linkedin.png" width="20px"></a></li>
+
+            <li><a href="https://discord.com/invite/vet6ZBjpFd" target="_blank"><img
+                  src="assets/images/logo-discord.png" width="20px"></a></li>
+          </ul>
+        </aside>
+      </div>
+      <div class="condiciones">
+        <p class="footer-consumos">* Los valores de consumos y emisiones presentes en el sitio web se
+          refieren a
+          su IP geográfica. Dicho
+          valor podría diferir de la realidad si navega a través de una VPN o si la ubicación de su
+          proveedor
+          de Internet no es exacta. Si cree que no está geolocalizado correctamente, contacte con su
+          concesionario de referencia para obtener información válida en su territorio sobre consumos y
+          emisiones.</p>
+        <div class="footer-copyright">
+          <p>Copyright © 2023 Automobili Lamborghini S.p.A. una sociedad unipersonal de Audi Group.</p>
+          <p>Todos los derechos reservados. Núm. IVA IT 00591801204</p>
+          <p>AVISO SOBRE OFERTAS ILEGALES DE SUPUESTAS ACCIONES DE AUTOMOBILI LAMBORGHINI S.P.A.</p>
+          <p>Automobili Lamborghini S.p.A. ha tenido noticia de que varios terceros de diferentes países
+            están
+            presuntamente ofreciendo acciones de Automobili Lamborghini S.p.A. Estas ofertas son
+            ilegales y
+            no provienen ni de Volkswagen Aktiengesellschaft ni de ninguna de sus filiales.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
