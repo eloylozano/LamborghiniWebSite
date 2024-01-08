@@ -722,11 +722,17 @@ main{
   height: 100vh;
   display: flex;
   align-items: center;
-  margin-left: 250px;
+}
+
+.revuelto-content-container-txt{
+  background: yellow;
 }
 
 .revuelto-content-txt {
-  max-width: 600px; 
+  background: lightgreen;
+  float: right;
+  width: 600px;  
+  margin-left: 300px;
 }
 
 .revuelto-content-txt img{
@@ -741,28 +747,23 @@ main{
   line-height: 30px;
 }
 
-.revuelto-content-img {
-  margin-left: 20px;
+.revuelto-diagonal{
+  background: yellow;
+  padding: 30px;
+}
+
+.revuelto-content-diagonal{
+  background: red;
+  overflow: hidden;
+  transform: skewX(-30deg); 
+  width: 600px;
+  margin: 0 50px;
 }
 
 .revuelto-content-img img {
   width: 100%;
-  margin: 10px 0;
   transform: skewX(30deg);
 }
-
-.skewed-container{
-  height: 50%;
-  background: red;
-  margin-left: 50px;
-}
-
-.skewed-container {
-  overflow: hidden;
-  transform: skewX(-30deg); 
-}
-
-
 
 
 /* ======================================================================================================= */
