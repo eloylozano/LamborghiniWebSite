@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lamborghini · Página Oficial</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Lamborghini Huracán· Página Oficial</title>
+  <link rel="stylesheet" href="styles-modelos.css">
   <script src="scripts.js"></script>
   <link rel="icon" href="assets/images/logo-lamborghini.svg">
 </head>
@@ -217,98 +217,37 @@
     </div>
   </div>
   <main>
-    <div class="portada-main">
-      <video src="/assets/videos/Trailer.mp4" autoplay muted loop></video>
-      <div class="text-video">
-        <h2>NUESTRO ÚLTIMO MODELO</h2>
-        <h1>LAMBORGHINI REVUELTO</h1>
-        <div class="hexagons">
-          <img class="hexagon-empty" src="/assets/images/hexagonoEmpty.png" width="70px">
-          <img class="hexagon-full" src="/assets/images/hexagonoFull.png" width="70px">
+    <div class="main-car">
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="index-es.html">HOME</a></li>
+          <li>/</li>
+          <li><b>MODELOS</b></li>
+        </ul>
+      </nav>
+      <div class="main-car-title">
+        <p>MODELOS</p>
+        <h1>LAMBORGHINI</h1>
+      </div>
+      <div class="vistas-modelos">
+        <div class="vistas-modelos-hexagons">
+          <img class="hexagon-empty" src="/assets/images/hexagonoDownEmpty.png" width="60px">
+          <img class="hexagon-full" src="/assets/images/hexagonoDownFull.png" width="60px">
+        </div>
+        <div class="vistas-modelos-txt">
+          <p>VISTA GENERAL DEL MODELO</p>
+          <h2>Todos los modelos Lamborghini</h2>
         </div>
       </div>
     </div>
-    
-    <div class="modelos-main">
-      <div class="text-images">
-        <h2>MODELOS</h2>
-        <div class="controles">
-          <div class="hexagonos">
-            <div id="btn-left" class="hexagonos-izq">
-              <img class="hexagono" src="/assets/images/hexagonoEmpty.png" width="50px">
-              <img class="hexagono-white" src="/assets/images/hexagonoFull.png" width="50px">
-            </div>
-            <div id="btn-right" class="hexagonos-der">
-              <img class="hexagono" src="/assets/images/hexagonoEmpty.png" width="50px">
-              <img class="hexagono-white" src="/assets/images/hexagonoFull.png" width="50px">
-            </div>
-          </div>
-        </div>
-        <div class="nombres-slider">
-          <div class="nombres-slider-revuelto">
-            <h1>REVUELTO</h1>
-            <p>FROM NOW ON</p>
-          </div>
-        </div>
-        <div class="descubreModelos">
-          <div class="moreinfo-container">
-            <img class="moreinfo" src="/assets/images/moreinfoEmpty.png" width="50px">
-            <img class="moreinfo-white" src="/assets/images/moreinfoFull.png" width="50px">
-          </div>
-          <div class="descubreModelos-txt">
-            <h4>Descubre el modelo</h4>
-          </div>
-        </div>
+    <div class="main-car-content">
+      <div class="revuelto-content">
+        <div class="revuelto-content-txt">
+          <img src="assets/images/logo-revuelto.png" width="100px">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi ducimus repudiandae magnam praesentium officiis nihil placeat corporis, illum nesciunt sapiente atque molestiae delectus a iste adipisci expedita est itaque officia.</p>    
       </div>
     </div>
   </div>
-
-
-    <div class="configurador-main">
-      <div class="text-configurador">
-        <h2>
-          <div class="letter">C</div>
-          <div class="letter">O</div>
-          <div class="letter">N</div>
-          <div class="letter">F</div>
-          <div class="letter">I</div>
-          <div class="letter">G</div>
-          <div class="letter">U</div>
-          <div class="letter">R</div>
-          <div class="letter">A</div>
-          <div class="letter">D</div>
-          <div class="letter">O</div>
-          <div class="letter">R</div>
-        </h2>
-        <h1 class="show">CREAR TU REVUELTO</h1>
-        <div class="hexagons">
-          <img class="hexagon-empty" src="/assets/images/hexagonoEmptyBlack.png" width="60px">
-          <img class="hexagon-full" src="/assets/images/hexagonoFullBlack.png" width="60px">
-        </div>
-        <div class="buttons-configurador">
-          <button class="default-button" onclick="changeBackground('revuelto', this)">Revuelto</button>
-          <button onclick="changeBackground('huracan', this)">Huracán</button>
-          <button onclick="changeBackground('urus', this)">Urus</button>
-        </div>
-      </div>
-    </div>
-    <div class="concesionarios-main">
-      <div class="text-concesionarios">
-        <h2>CONFIGURADOR</h2>
-        <h1>ENCUENTRE A SU
-          CONCESIONARIO LOCAL</h1>
-        <div class="hexagons">
-          <img class="hexagon-empty" src="/assets/images/hexagonoEmpty.png" width="60px">
-          <img class="hexagon-full" src="/assets/images/hexagonoFull.png" width="60px">
-        </div>
-      </div>
-      <div class="concesionarios-main-pic">
-        <img src="/assets/images/Concesionarios.png"></img>
-      </div>
-    </div>
-    <div class="noticias">
-
-    </div>
   </main>
   <footer>
     <div class="footer-contenedor">
@@ -374,105 +313,6 @@
       </div>
     </div>
   </footer>
-  <style>
-    .nombres-slider h1{
-      transform: translateY(0px); 
-      opacity: 0;
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .nombres-slider p{
-      transform: translateX(0px); 
-      opacity: 0;
-      transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .nombres-slider h1.show{
-      opacity: 1;
-      transform: translate(0px);
-      animation: fromTop 1s ease-in-out;
-    }
-
-    .nombres-slider p.show{
-      opacity: 1;
-      transform: translate(0px);
-      animation: fromLeft 1s ease-in-out;
-    } 
-
-    @keyframes fromTop {
-      from {
-        transform: translateY(-500px);
-      }
-      to {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fromLeft {
-      from {
-        transform: translateX(-500px);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
-</style>
-  
-  <script>
-    const modelos = [
-      { nombre: "revuelto", descripcion: "FROM NOW ON" },
-      { nombre: "sterrato", descripcion: "BEYOND THE CONCRETE" },
-      { nombre: "urus", descripcion: "UNLOCK ANY ROAD" }
-      // Agrega más modelos según sea necesario
-    ];
-  
-    let modeloActualIndex = 0;
-  
-    function cambiarFondoYTexto() {
-      const modelosMain = document.querySelector(".modelos-main");
-      const h1 = document.querySelector(".nombres-slider-revuelto h1");
-      const descripcion = document.querySelector(".nombres-slider-revuelto p");
-  
-      modelosMain.style.transition = "background-image 2s ease";
-      modelosMain.style.backgroundImage = `url(/assets/images/slider_${modelos[modeloActualIndex].nombre}.jpg)`;
-  
-      h1.classList.remove("show");
-    
-      descripcion.classList.remove("show");
-  
-      setTimeout(() => {
-        h1.textContent = modelos[modeloActualIndex].nombre.toUpperCase();
-        descripcion.textContent = modelos[modeloActualIndex].descripcion;
-  
-        h1.classList.add("show");
-        descripcion.classList.add("show");
-      }, 100);
-    }
-  
-    document.getElementById("btn-left").addEventListener("click", function () {
-      modeloActualIndex = (modeloActualIndex - 1 + modelos.length) % modelos.length;
-      cambiarFondoYTexto();
-    });
-  
-    document.getElementById("btn-right").addEventListener("click", function () {
-      modeloActualIndex = (modeloActualIndex + 1) % modelos.length;
-      cambiarFondoYTexto();
-    });
-  
-    // Recargar la página al hacer clic en hexágonos
-    document.querySelector('.hexagons').addEventListener('click', function () {
-      location.reload();
-    });
-  
-    // Inicializar el fondo con el primer modelo
-    cambiarFondoYTexto();
-  
-    // Limpiar la transición después de que se complete
-    document.querySelector(".modelos-main").addEventListener("transitionend", function () {
-      this.style.transition = "";
-    });
-  </script>
-  
 </body>
 
 </html>

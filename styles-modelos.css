@@ -52,6 +52,12 @@ header {
   cursor: pointer;
 }
 
+.nav-header-text a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1em;
+}
+
 .nav-header-text::before {
   content: "";
   position: absolute;
@@ -590,9 +596,124 @@ header {
 
 /* ---------------------------------------------------------------------------------- */
 
-main {
-  background: white;
+
+
+.main-car{
+  background-image: url(assets/images/LamborghiniRevuelto02.jpg);
+  background-size: cover;
   height: 100vh;
+}
+
+.breadcrumb {
+  width: 300px;
+  left: -5%;
+  top: 20%;
+  position: absolute;
+  transform: skewX(-25deg);
+}
+
+.breadcrumb a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center; 
+}
+
+.breadcrumb ul{
+  background: #1a1a1a;
+  display: flex;
+  color: white;
+  margin: 0;
+  padding-right: 20px;
+  padding-left: 200px;
+  float: right;
+  list-style: none;
+}
+
+.breadcrumb ul li{
+  display: flex;
+  align-items: center; 
+  font-size: 0.9em;
+  margin: 5px;
+  transform: skew(25deg);
+}
+
+.main-car-title {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.main-car-title  h1 {
+  font-size: 6.5rem;
+  width: 60%;
+  line-height: 1;
+}
+
+.main-car-title p {
+  margin-top: 100px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.main-car-title  h1,
+.main-car-title  p {
+  margin: 0;
+}
+
+.vistas-modelos {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+  align-items: center; 
+  color: white;
+}
+
+.vistas-modelos-hexagons {
+  margin-right: 40px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.hexagon-empty,
+.hexagon-full {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hexagon-full {
+  opacity: 0;
+}
+
+.vistas-modelos-hexagons:hover .hexagon-empty {
+  opacity: 0;
+}
+
+.vistas-modelos-hexagons:hover .hexagon-full {
+  opacity: 1;
+}
+
+.vistas-modelos-txt p{
+  font-weight: 700;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+.vistas-modelos-txt h2{
+  margin: 0;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.main-car-content{
+  height: 100vh;
+  background: #fff;
 }
 
 .footer-rrss {
@@ -601,9 +722,11 @@ main {
 }
 
 footer {
+  position: relative;
   background-color: #1a1a1a;
   color: whitesmoke;
   padding-bottom: 20px;
+  bottom: 0%;
 }
 
 footer section {

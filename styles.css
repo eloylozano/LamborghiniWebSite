@@ -52,6 +52,13 @@ header {
   cursor: pointer;
 }
 
+.nav-header-text a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+
 .nav-header-text::before {
   content: "";
   position: absolute;
