@@ -595,7 +595,9 @@ header {
 }
 
 /* ---------------------------------------------------------------------------------- */
-
+main{
+  background: grey;
+}
 
 
 .main-car{
@@ -716,6 +718,54 @@ header {
   background: #fff;
 }
 
+.revuelto-content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.revuelto-content-txt {
+  max-width: 600px; 
+}
+
+.revuelto-content-txt img{
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+}
+
+.revuelto-content-txt p {
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 30px;
+}
+
+.revuelto-content-img {
+  margin-left: 20px;
+}
+
+.revuelto-content-img img {
+  width: 100%;
+  margin: 10px 0;
+  transform: skewX(30deg);
+}
+
+.skewed-container{
+  height: 50%;
+  background: red;
+  margin-left: 50px;
+}
+
+.skewed-container {
+  overflow: hidden;
+  transform: skewX(-30deg); 
+}
+
+
+
+
+/* ======================================================================================================= */
 .footer-rrss {
   padding: 40px 170px 0;
   height: 10vh;
