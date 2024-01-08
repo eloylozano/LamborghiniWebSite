@@ -612,7 +612,7 @@ main{
 }
 
 .breadcrumb {
-  width: 300px;
+  width: auto;
   left: -5%;
   top: 15%;
   position: absolute;
@@ -823,6 +823,10 @@ main{
   line-height: 30px;
 }
 
+.animated-link a{
+  text-decoration: none;
+  color: #1a1a1a;
+}
 
 .animated-link p {
   width: 350px;
@@ -858,6 +862,53 @@ main{
   width: 100%;
 }
 
+.revuelto-main{
+  height: 110vh;
+}
+
+.revuelto-main video {
+  width: 100%;
+  display: block;
+}
+
+.text-video {
+  position: absolute;
+  top: 50%;
+  left: 170px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.text-video h1 {
+  font-size: 7rem;
+  width: 100%;
+  line-height: 1;
+}
+
+.text-video h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.text-video h1,
+.text-video p {
+  margin: 0;
+}
+
+.hexagons {
+  margin-top: 30px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.hexagons:hover .hexagon-empty {
+  opacity: 0;
+}
+
+.hexagons:hover .hexagon-full {
+  opacity: 1;
+}
 /* ======================================================================================================= */
 .footer-rrss {
   padding: 40px 170px 0;
