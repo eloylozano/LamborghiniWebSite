@@ -368,3 +368,14 @@ document.addEventListener("DOMContentLoaded", function () {
     hexagonEmpty.classList.add("show");
   }, 100);
 });
+
+
+document.getElementById("all-models-link").addEventListener("click", function(event) {
+  event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+  
+  // Obtén la posición del elemento con ID "all-models"
+  const allModelsElement = document.getElementById("all-models");
+  
+  // Realiza el desplazamiento suave hacia la posición del elemento
+  allModelsElement.scrollIntoView({ behavior: "smooth" });
+});
