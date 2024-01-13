@@ -613,6 +613,7 @@ main{
 
 .breadcrumb {
   width: auto;
+  z-index: 1;
   left: -5%;
   top: 15%;
   position: absolute;
@@ -868,12 +869,13 @@ main{
 
 .revuelto-main video {
   width: 100%;
+  height: auto;
   display: block;
 }
 
 .text-video {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 170px;
   transform: translateY(-50%);
   color: white;
@@ -886,6 +888,7 @@ main{
 }
 
 .text-video h2 {
+  margin-top: 100px;
   font-size: 1.8em;
   font-weight: 600;
 }
@@ -909,6 +912,41 @@ main{
 .hexagons:hover .hexagon-full {
   opacity: 1;
 }
+
+.text-video-sup{
+  margin-bottom: 250px;
+}
+
+.specs-video{
+  display: flex;
+}
+
+.specs-video h2{
+  margin: 0;
+}
+
+
+.specs-video-left thead{
+  font-weight: 700;
+}
+
+
+.specs-video-left table td{
+  padding-right: 35px;
+}
+
+.specs-video-right{
+  display: flex;
+  margin-left: 450px;
+}
+
+
+
+
+
+
+
+
 /* ======================================================================================================= */
 .footer-rrss {
   padding: 40px 170px 0;
