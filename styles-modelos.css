@@ -52,7 +52,7 @@ header {
   cursor: pointer;
 }
 
-.nav-header-text a{
+.nav-header-text a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 1em;
@@ -153,7 +153,8 @@ header {
 }
 
 .barras.active .barra1 {
-  transform: rotate(45deg) translate(6px, 6px); /* Ajustado para inclinarse desde la izquierda */
+  transform: rotate(45deg) translate(6px, 6px);
+  /* Ajustado para inclinarse desde la izquierda */
 }
 
 .barras.active .barra2 {
@@ -161,7 +162,8 @@ header {
 }
 
 .barras.active .barra3 {
-  transform: rotate(-45deg) translate(6px, -6px); /* Ajustado para inclinarse desde la izquierda */
+  transform: rotate(-45deg) translate(6px, -6px);
+  /* Ajustado para inclinarse desde la izquierda */
 }
 
 .barras:hover .barra1,
@@ -184,6 +186,7 @@ header {
   overflow: hidden;
   transition: transform 0.5s;
 }
+
 .submenu-general.show {
   max-height: 750px;
   opacity: 1;
@@ -595,17 +598,12 @@ header {
 }
 
 /* ---------------------------------------------------------------------------------- */
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
-main{
-  height: 100%;
-  background: #e9e9e9;
-}
-
-
-.main-car{
+.main-car {
   background-image: url(assets/images/LamborghiniRevuelto02.jpg);
   background-size: cover;
   height: 100vh;
@@ -620,14 +618,14 @@ main{
   transform: skewX(-25deg);
 }
 
-.breadcrumb a{
+.breadcrumb a {
   text-decoration: none;
   color: white;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.breadcrumb ul{
+.breadcrumb ul {
   background: #1a1a1a;
   display: flex;
   color: white;
@@ -638,7 +636,7 @@ main{
   list-style: none;
 }
 
-.breadcrumb ul li{
+.breadcrumb ul li {
   display: flex;
   align-items: center;
   font-size: 0.9em;
@@ -655,7 +653,7 @@ main{
   color: white;
 }
 
-.main-car-title  h1 {
+.main-car-title h1 {
   font-size: 6.5rem;
   width: 60%;
   line-height: 1;
@@ -667,8 +665,8 @@ main{
   font-weight: 600;
 }
 
-.main-car-title  h1,
-.main-car-title  p {
+.main-car-title h1,
+.main-car-title p {
   margin: 0;
 }
 
@@ -677,7 +675,7 @@ main{
   bottom: 10%;
   right: 10%;
   display: flex;
-  align-items: center; 
+  align-items: center;
   color: white;
 }
 
@@ -715,19 +713,20 @@ main{
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
 }
 
-.vistas-modelos-txt p{
+.vistas-modelos-txt p {
   font-weight: 700;
   font-size: 0.9em;
   margin: 0;
   padding: 0;
 }
 
-.vistas-modelos-txt h2{
+.vistas-modelos-txt h2 {
   margin: 0;
   font-weight: 400;
   font-size: 2em;
@@ -744,11 +743,11 @@ main{
 
 .revuelto-content-txt {
   float: right;
-  width: 600px;  
+  width: 600px;
   margin-left: 250px;
 }
 
-.revuelto-content-txt img{
+.revuelto-content-txt img {
   max-width: 100%;
   height: auto;
   width: 300px;
@@ -775,7 +774,7 @@ main{
   flex: 1;
   margin: 250px 150px 0 0;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
 }
 
 .huracan-content-txt {
@@ -789,7 +788,7 @@ main{
   margin: 16px 0;
 }
 
-.huracan-content-txt p{
+.huracan-content-txt p {
   font-size: 1em;
   font-weight: 100;
   margin: 16px 0px;
@@ -810,11 +809,11 @@ main{
 
 .urus-content-txt {
   float: right;
-  width: 600px;  
+  width: 600px;
   margin-left: 250px;
 }
 
-.urus-content-txt img{
+.urus-content-txt img {
   width: 250px;
 }
 
@@ -824,7 +823,7 @@ main{
   line-height: 30px;
 }
 
-.animated-link a{
+.animated-link a {
   text-decoration: none;
   color: #1a1a1a;
 }
@@ -863,7 +862,7 @@ main{
   width: 100%;
 }
 
-.revuelto-main{
+.revuelto-main {
   height: 110vh;
 }
 
@@ -913,41 +912,41 @@ main{
   opacity: 1;
 }
 
-.text-video-sup{
+.text-video-sup {
   margin-bottom: 250px;
 }
 
-.specs-video{
+.specs-video {
   display: flex;
 }
 
-.specs-video h2{
+.specs-video h2 {
   margin: 0;
 }
 
 
-.specs-video-left thead{
+.specs-video-left thead {
   font-weight: 600;
 }
 
-.specs-video-left tbody{
+.specs-video-left tbody {
   font-weight: 100;
 }
 
-.specs-video-left table td{
+.specs-video-left table td {
   padding-right: 35px;
 }
 
-.specs-video-right{
+.specs-video-right {
   display: flex;
   margin-left: 450px;
 }
 
-.specs-configurador-txt p{
+.specs-configurador-txt p {
   font-weight: 600;
 }
 
-.specs-configurador-txt h2{
+.specs-configurador-txt h2 {
   font-weight: 100;
   font-size: 2.5em;
 }
@@ -965,10 +964,55 @@ main{
 
 .revuelto-trailer video {
   width: 1200px;
-  height: auto; 
+  height: auto;
 }
 
+.revuelto-info {
+  position: relative;
+  background-image: url(assets/images/revuelto-text.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 3074px;
+}
 
+.revuelto-info-txt {
+  position: relative;
+  width: 500px;
+  left: 67%;
+  top: 10%;
+}
+
+.revuelto-info-txt p {
+  text-align: justify;
+  font-weight: 100;
+}
+
+.revuelto-info-txt02 {
+  position: relative;
+  width: 500px;
+  left: 12%;
+  top: 22%;
+  line-height: 1.8;
+}
+
+.revuelto-info-txt02 p {
+  text-align: justify;
+  font-weight: 100;
+}
+
+.revuelto-info-txt03 {
+  position: relative;
+  width: 600px;
+  left: 45%;
+  top: 52%;
+  line-height: 1.8;
+}
+
+.revuelto-info-txt03 p {
+  text-align: justify;
+  font-weight: 100;
+  font-size: 1.;
+}
 /* ======================================================================================================= */
 .footer-rrss {
   padding: 40px 170px 0;
