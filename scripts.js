@@ -242,10 +242,6 @@ document.addEventListener("DOMContentLoaded", mostrarSubmenu);
 
 
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var clientservice = document.getElementById("clientservice");
   var submenu = document.getElementById("submenu-motorsport");
