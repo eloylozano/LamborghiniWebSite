@@ -913,7 +913,7 @@ body {
 }
 
 .text-video-sup {
-  margin-bottom: 250px;
+  margin-bottom: 300px;
 }
 
 .specs-video {
@@ -972,7 +972,7 @@ body {
   background-image: url(assets/images/revuelto-text.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 3074px;
+  height: 2834px;
 }
 
 .revuelto-info-txt {
@@ -1012,6 +1012,77 @@ body {
   text-align: justify;
   font-weight: 100;
   font-size: 1.;
+}
+
+.revuelto-specs{
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.specs-container h1{
+  text-align: center;
+}
+
+.specs-container ul{
+  padding: 0;
+}
+
+.specs-container li{
+  height: 45px;
+  width: 900px;
+  border-bottom: 1px solid #c9c9c9;
+  padding-top: 35px;
+  list-style: none;
+  display: flex;
+}
+
+.span-left{
+  float: left;
+  width: 100%;
+  font-weight: 500;
+}
+
+.span-right{
+  width: 100%;
+  text-align: right;
+  font-weight: 100;
+}
+
+.descubreModelos {
+  display: flex;
+  margin-top: 50px;
+}
+
+.descubreModelos-txt {
+  align-items: center; 
+}
+
+.descubreModelos-txt h4 {
+  font-size: 1.2em;
+  margin: 15px 0 0 80px;
+  font-weight: 100;
+}
+
+.moreinfo,
+.moreinfo-white {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 60px;
+}
+
+.moreinfo-white {
+  opacity: 0;
+}
+
+.moreinfo-container:hover .moreinfo {
+  opacity: 0;
+}
+
+.moreinfo-container:hover .moreinfo-white {
+  opacity: 1;
 }
 /* ======================================================================================================= */
 .footer-rrss {
