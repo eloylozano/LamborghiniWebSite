@@ -1004,7 +1004,7 @@ body {
   position: relative;
   width: 600px;
   left: 45%;
-  top: 52%;
+  top: 58%;
   line-height: 1.8;
 }
 
@@ -1096,10 +1096,11 @@ body {
 }
 
 .detailed-specs-container{
-  display: flex;
+  display: none;
 }
 
 .hexagonCross-container{
+  display: none;
   height: 50px;
   position: relative;
   padding: 50px;

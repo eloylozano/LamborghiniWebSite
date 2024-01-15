@@ -312,7 +312,7 @@
         </p>
       </div>
     </div>
-    <div class="revuelto-specs">
+    <div class="revuelto-specs" id="revuelto-specs">
       <div class="specs-container">
         <h1>ESPECIFICACIONES TÉCNICAS</h1>
         <ul>
@@ -347,13 +347,13 @@
         </ul>
         <div class="button-more-specs">
           <div class="descubreModelos">
-            <div class="moreinfo-container">
+            <div class="moreinfo-container" id="moreInfoContainer">
               <img class="moreinfo" src="/assets/images/moreinfoBlackEmpty.png" width="50px">
               <img class="moreinfo-white" src="/assets/images/moreinfoBlackFull.png" width="50px">
             </div>
             <div class="descubreModelos-txt">
               <h4>Ampliar todas las especificaciones técnicas</h4>
-            </div>
+            </div>           
           </div>
         </div>
       </div>
@@ -361,7 +361,7 @@
     <div class="hexagonCross-container" id="hexagonCrossContainer">
       <img class="hexagonCrossFull" src="/assets/images/hexagonCrossFull.png" width="50px">
     </div>
-    
+
     <div class="detailed-specs-container" id="detailedSpecsContainer">
       <div class="detailed-specs">
         <div class="detailed-specs-right">
@@ -584,6 +584,36 @@
         </div>
       </div>
     </div>
+    <script>
+      var moreInfoContainer = document.getElementById("moreInfoContainer");
+    
+      moreInfoContainer.addEventListener("click", function () {
+        var detailedSpecsContainer = document.getElementById("detailedSpecsContainer");
+        var hexagonCrossContainer = document.getElementById("hexagonCrossContainer");
+    
+        // Oculta los elementos
+        detailedSpecsContainer.style.display = "block";
+        hexagonCrossContainer.style.display = "block";
+    
+        // Realiza el desplazamiento suave hacia la posición del elemento
+        hexagonCrossContainer.scrollIntoView({ behavior: "smooth" });
+      });
+
+      var hexagonContainer = document.getElementById("hexagonCrossContainer");
+    
+      hexagonContainer.addEventListener("click", function () {
+        var detailedSpecsContainer = document.getElementById("detailedSpecsContainer");
+        var hexagonCrossContainer = document.getElementById("hexagonCrossContainer");
+        var revueltoSpecs = document.getElementById("revuelto-specs");
+    
+        // Oculta los elementos
+        detailedSpecsContainer.style.display = "none";
+        hexagonCrossContainer.style.display = "none";
+    
+        // Realiza el desplazamiento suave hacia la posición del elemento
+        revueltoSpecs.scrollIntoView({ behavior: "smooth" });
+      });
+    </script> 
 
 
 
